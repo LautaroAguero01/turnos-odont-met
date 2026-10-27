@@ -1,6 +1,6 @@
 {
   "version": 4,
-  "step": "roadmap",
+  "step": "done",
   "owner": "active-orchestrator",
   "discovery": {
     "created_by": "discovery-research",
@@ -197,6 +197,37 @@
       "C-19",
       "C-20",
       "C-21"
+    ]
+  },
+  "skills": {
+    "created_by": "find-skill",
+    "recommended": [
+      "test-driven-development",
+      "postgresql-table-design"
+    ],
+    "installed": [],
+    "justification": "No se requiere instalacion de skills externas adicionales dado que el andamiaje cuenta con OpenSpec y Active Stack nativos."
+  },
+  "registry": {
+    "created_by": "skill-registry",
+    "file": ".atl/skill-registry.md"
+  },
+  "agents": {
+    "created_by": "agent-instruction",
+    "files": [
+      "AGENTS.md",
+      "CLAUDE.md"
+    ],
+    "reglas_applied": [
+      "salud_privacidad_datos_ficticios",
+      "whatsapp_sin_datos_clinicos",
+      "inmutabilidad_historia_clinica",
+      "prevencion_solapamiento_profesional_sillon",
+      "sobreturno_controlado",
+      "typescript_strict_no_any",
+      "precios_numeric_ars",
+      "sdd_contrato_aprobado",
+      "tests_en_verde_obligatorios"
     ]
   }
 }
