@@ -1,0 +1,338 @@
+METODOLOGÍA I
+Trabajo de Integración: del Discovery al primer Change, con
+Spec-Driven Development y Active Stack
+O B J E T I V O 	 G E N E R A L
+Recorrer, de principio a ﬁn y sobre un producto real, el ﬂujo de trabajo que vieron en los videos de SDD con
+OpenSpec y de Active Stack: partir de una idea sin ningún código, investigarla con método (Discovery), fundar el
+proyecto con un agente de IA (base de conocimiento, roadmap y reglas del agente) y llevar una funcionalidad
+desde su especiﬁcación hasta su archivado mediante un ciclo OPSX completo.
+El producto sobre el que van a trabajar es un sistema de gestión de turnos y agenda de pacientes para
+consultorios odontológicos, pensado para el mercado argentino. No van a programar “lo que se les ocurra”: van a
+decidir qué construir a partir de evidencia veriﬁcable, y a demostrar que cada decisión quedó registrada y es
+trazable.
+P U N T O 	 D E 	 P A R T I D A
+Este trabajo da por sabido lo explicado en los videos. Si algún concepto de la siguiente tabla no les resulta claro,
+vuelvan a verlos antes de empezar:
+Video SDD + OpenSpec: qué es una especiﬁcación, escenarios veriﬁcables y el ciclo explore → propose →
+apply → archive.
+Active Stack (partes 1, 2 y 3): harnesses, modos de instalación (Lite/Full/Custom), /active-orchestrator,
+las siete etapas de la fundación, el protocolo de inspección (Continuar / Ajustar / Parar acá), la bitácora
+compartida, el ciclo OPSX y Engram.
+M A R C O 	 T E Ó R I C O
+Concepto Aplicación en este trabajo
+Discovery Conviert e “tengo una idea” en “ sé qué v oy a c onstruir y por qué” , antes de decidir
+arquitectur a. Ac á lo v an a r esolv er con una in vestigación de mer cado e xhaus tiva y
+veriﬁc able.
+Harness Andamiaje que r odea al modelo (skills, c onﬁgur ación, herr amien tas externas). Activ e
+Stack ins tala ese andamiaje sobr e su pr oyecto.
+Fundación del
+proyectoLas sie te etapas de /active-orchestrator: OpenSpec Init, Disc overy, KB Cr eator,
+Roadmap Gener ator, Find Skill, Skill R egistry y Ag ent Ins truction.TECNICATURA UNIVERSITARIA
+EN PROGRAMACION
+1
+Metodologia IConcepto Aplicación en este trabajo
+Knowledg e-base y
+CHANGES.mdMapa de c ontexto del pr oyecto y plan de implemen tación. De ellos sale la lis ta de
+chang es de la cual elig en el que v an a implemen tar.
+Protocolo de
+inspecciónAl ﬁnal de c ada e tapa deciden en tre Con tinuar , Ajus tar o P arar ac á. Lo que se e valúa no
+es que ha yan avanzado, sino que ha yan leído  lo gener ado y c orregido lo que es taba mal.
+Ciclo OPS X Explor e, pr opose, apply , verify y ar chive sobr e un c ambio c oncr eto. La especiﬁc ación
+aprobada en pr opose es el c ontrato de la implemen tación.
+Engr am Memoria per sistente del ag ente en tre sesiones. V an a mos trar qué quedó guar dado y
+cómo se r ecuper a.
+M O D A L I D A D 	 Y 	 O R G A N I Z A C I Ó N
+Individual o en grupo de hasta 3 integrantes. Todos los integrantes deben participar en alguna parte del ﬂujo.
+En grupo, cada integrante debe ser responsable de al menos una etapa de la fundación o del ciclo OPSX (por
+ejemplo: uno lleva Discovery, otro KB + Roadmap, otro el change). Ser responsable signiﬁca conducir esa etapa
+con el agente, revisar lo generado y decidir Continuar/Ajustar.
+La participación de cada integrante tiene que ser demostrable: aparece explicada en la reﬂexión escrita, se ve
+en el historial de commits del repositorio (cada persona con sus propios commits) y cada uno habla en el video
+de defensa.
+Un único repositorio y una única entrega por individuo o por grupo.
+C A S O 	 P R Á C T I C O
+El trabajo se divide en ocho etapas consecutivas. Las etapas 1 a 5 corresponden a la fundación del proyecto (las
+siete etapas de /active-orchestrator agrupadas de forma didáctica); la etapa 6 es el ciclo OPSX y la 7 cierra
+con evidencia y memoria. No avancen a una etapa sin haber revisado la anterior: en cada una usen el protocolo
+de inspección y anoten qué decidieron y por qué.
+E t a p a 	 0 . 	 P r e p a r a c i ó n 	 d e l 	 e n t o r n o
+Herramientas previas: Go, Git y Node instalados, y un agente de código (OpenCode o Claude Code)
+funcionando.
+Active Stack en modo Full: clonar github.com/Group-Active-IA/active-stack, ejecutar build.bat
+(Windows) o build.sh (Linux/macOS) y correr el instalador eligiendo el modo Full, tal como se muestra en la
+Parte 1.
+Repositorio nuevo y vacío para el trabajo (Git inicializado, sin código previo). Nombre sugerido: turnos-
+odontologia.
+Evidencia: una captura del instalador ﬁnalizado y de la lista de harnesses instalados.TECNICATURA UNIVERSITARIA
+EN PROGRAMACION
+2
+Metodologia IE t a p a 	 1 . 	 I n i c i a r 	 l a 	 f u n d a c i ó n 	 (/active-orchestrator 	 y 	openspec init )
+Ejecutar /active-orchestrator dentro del repositorio vacío. Debe correr primero openspec init, que
+deja lista la estructura base de OpenSpec.
+Cuando aparezca la pregunta de la bifurcación (“¿hacemos estudio de mercado?”), responder Sí: se decide una
+sola vez y en este trabajo el Discovery es obligatorio.
+Evidencia: el archivo de estado .active-orchestrator-state.json con la etapa completada (se incluye en
+el repositorio).
+E t a p a 	 2 . 	 D i s c o v e r y : 	 i n v e s t i g a c i ó n 	 d e 	 m e r c a d o
+Es el corazón del trabajo y la etapa donde más tiempo conviene invertir. Se ejecuta con la skill discovery-
+research, que responde un checklist de once puntos: problema, usuarios, casos de uso, competidores,
+funcionalidades necesarias, funcionalidades opcionales, reglas de negocio, integraciones, restricciones, riesgos y
+preguntas abiertas. Si le pasan URLs de competidores, la skill puede delegar en web-scraper para investigarlas
+antes de preguntarles.
+Además de esa ronda de preguntas, deben encargarle a su agente la siguiente investigación, tal cual está
+redactada (pueden copiarla y pegarla como consigna):TECNICATURA UNIVERSITARIA
+EN PROGRAMACION
+3
+Metodologia IConsigna de in vestigación par a el ag ente
+Actuá c omo analis ta sénior de mer cado y pr oduct o SaaS especializ ado en salud digit al y odon tología en Ar gentina
+y Latinoaméric a.
+Obje tivo: realiz ar una búsqueda e xhaus tiva de sis temas odon tológic os que permit an gestionar turnos y ag enda de
+pacien tes. El pr opósit o es iden tiﬁcar soluciones e xistentes, c ompar ar sus funcionalidades y de tectar
+oportunidades par a desarr ollar un pr oduct o compe titivo.
+Alcance g eogr áﬁco y prioridad:  Argentina; La tinoaméric a; soluciones in ternacionales r elevantes que puedan
+utiliz arse o inspir ar un pr oduct o par a el mer cado ar gentino.
+Busc á exclusiv amen te fuen tes veriﬁc ables: sitios oﬁciales de c ada pr oveedor , documen tación públic a, páginas de
+precios, cen tros de a yuda, videos oﬁciales, mark etplaces c onﬁables y r eseñas v eriﬁc adas. Indic á la URL y la f echa
+de consult a de c ada fuen te. No in ventes funcionalidades: si una c aracterística no es tá demos trada públic amen te,
+consignála c omo “No e videnciado” .
+Para cada sis tema iden tiﬁcado, relevá:
+Nombr e del pr oduct o, empr esa pr oveedor a, país de orig en y URL oﬁcial.
+Segmen to obje tivo: odon tólog o independien te, consult orio, clínic a, cadena, cen tro multidisciplinario o
+labor atorio.
+Modalidad: SaaS, nube, aplic ación mó vil, ins talación loc al o híbrida.
+Gestión de ag enda: vis ta diaria/ semanal, múltiples pr ofesionales, múltiples sillones o bo xes, dur ación v ariable
+de pr estaciones, bloqueos, sobr eturnos y pr evención de solapamien tos.
+Turnos digit ales: r eser va online 24/7, enlace de r eser va, web, r edes sociales, cha tbot, Wha tsApp,
+conﬁrmación, c ancelación, r eprogramación y lis ta de esper a.
+Automa tización: r ecordatorios, c onﬁrmaciones, seguimien to de ausen tes, r ecuper ación de pacien tes,
+controles periódic os y c ampañas.
+Gestión odon tológic a: ﬁcha clínic a, anamnesis, odon tograma, periodon tograma, imág enes/r adiogr afías,
+presupues tos y planes de tr atamien to.
+Adminis tración: c aja, c obros, factur ación, señas, Mer cado P ago, obr as sociales/pr epag as, liquidaciones,
+report es y mé tricas.
+Integraciones: Wha tsApp Business API, Google Calendar , sitio w eb, APIs públic as, Mer cado P ago, AFIP /ARCA,
+radiología, ﬁrma digit al y herr amien tas de mark eting.
+Oper ación: sucur sales, r oles y permisos, audit oría, e xport ación de da tos, soport e y c apacit ación.
+Seguridad y cumplimien to: da tos sensibles de salud, priv acidad, tr azabilidad, r espaldo , control de acceso y
+adecuación declar ada a la norma tiva argentina aplic able.
+Modelo c omer cial: prueba gr atuita, plan gr atuito, precios public ados, moneda, modalidad de c obro y c ostos
+adicionales visibles.
+Fortalezas, limit aciones y dif erenciales e viden tes.
+Evidencia de adopción: c asos de é xito, cantidad de clien tes solo si es tá public ada y r eseñas v eriﬁc ables.
+Presen tá el r esult ado en cua tro secciones:
+A. Tabla c ompar ativa de al menos 15 sis temas, or denados por r elevancia par a Argentina.TECNICATURA UNIVERSITARIA
+EN PROGRAMACION
+4
+Metodologia IB. Ma triz de pun tuación  de 0 a 5, c on es tos pesos: Ges tión de turnos y aut oma tización, 25 %; Funcionalidad
+odon tológic a clínic a, 20 %; In tegraciones loc ales y Wha tsApp, 15 %; Adminis tración, c obros y f actur ación, 15 %;
+Experiencia del pacien te, 10 %; Seguridad, e xport ación y tr azabilidad, 10 %; Pr ecio y f acilidad de adopción, 5 %.
+C. Análisis c ompe titivo: funcionalidades que y a son es tándar de mer cado; funcionalidades dif erenciador as reales;
+vacíos fr ecuen tes del mer cado ar gentino; oportunidades de inno vación par a un nue vo sis tema de g estión
+odon tológic a.
+D. Recomendación ﬁnal:  cinc o compe tidor es priorit arios par a analiz ar median te demo; tr es pr oduct os de
+referencia par a experiencia de usuario; un MVP sug erido c on funcionalidades impr escindibles, dif erenciador es y
+funcionalidades a dejar par a etapas pos terior es.
+Redact á en español f ormal, c on crit erio crític o. Dif erenciá siempr e en tre una funcionalidad c ompr obada y una
+aﬁrmación c omer cial del pr oveedor .
+Un agente de IA no deja huecos sin resolver: si no encuentra un dato, tiende a inventarlo. Por eso la
+veriﬁcación de fuentes es parte de la consigna y se evalúa:
+Como mínimo, abran y comprueben personalmente 5 de las fuentes citadas (elijan una de cada tipo: sitio
+oﬁcial, página de precios, centro de ayuda, etc.). Para cada una, anoten si lo que el informe aﬁrma
+realmente está en esa URL.
+Toda celda de la tabla sin respaldo público debe decir “No evidenciado”, no quedar vacía ni completarse
+por deducción.
+Si encuentran una aﬁrmación falsa o no respaldada, corríjanla con Ajustar y dejen registrado el hallazgo
+(se usa en la reﬂexión).
+Entregable de la etapa: el informe de Discovery (docs/discovery/informe-discovery.md y su versión en
+PDF) con las secciones A, B, C y D, más la sección ﬁnal “Veriﬁcación de fuentes”. El resultado estructurado de
+discovery-research (checklist de once puntos) se guarda en la misma carpeta.
+Guardar el informe dentro del repositorio es importante: es el insumo que la etapa siguiente va a leer.
+E t a p a 	 3 . 	 B a s e 	 d e 	 c o n o c i m i e n t o 	 (kb-creator )
+Ejecutar la etapa. Al existir documentación fuente en docs/, la skill puede trabajar en modo silencioso; si les
+hace preguntas (modo interactivo), respóndanlas con criterio y en base a lo investigado, no con respuestas al
+azar.
+Resultado esperado: la carpeta knowledge-base/ con los diez archivos canónicos: visión, descripción, actores,
+modelos de datos, reglas de negocio, features, ﬂujos, arquitectura, decisiones y preguntas abiertas.
+Revisión obligatoria (Ajustar si corresponde): veriﬁcar que la knowledge-base reﬂeje el informe de Discovery
+(competidores, MVP recomendado, vacíos del mercado) y no un producto genérico. Como mínimo, comprobar
+que las reglas de negocio incluyan las de agenda (duración de prestaciones, sillones o boxes, prevención de
+solapamientos) y que “preguntas abiertas” contenga los puntos que el Discovery dejó como “No evidenciado”.TECNICATURA UNIVERSITARIA
+EN PROGRAMACION
+5
+Metodologia IE t a p a 	 4 . 	 R o a d m a p 	 (roadmap-generator )
+Generar CHANGES.md a partir de la knowledge-base: dependencias entre tareas, asignación con contexto
+suﬁciente, camino crítico y riesgos.
+Revisión obligatoria: el roadmap debe estar alineado con el MVP recomendado en la sección D del informe. Si
+incluye funcionalidades que el propio Discovery dejó para etapas posteriores, o si omite una imprescindible,
+usen Ajustar.
+E t a p a 	 5 . 	 S k i l l s 	 y 	 r e g l a s 	 d e l 	 a g e n t e 	 (find-skill , 	skill-registry , 	agent-instruction )
+ﬁnd-skill: solo recomienda. Elijan qué skills instalar (o ninguna) y justiﬁquen la decisión en una línea por cada
+recomendación.
+skill-registry: debe quedar generado .atl/skill-registry.md.
+agent-instruction: es la única etapa realmente interactiva. Revisen cada regla candidata antes de conﬁrmarla;
+deben quedar AGENTS.md y CLAUDE.md en la raíz. Agreguen a mano, si corresponde, al menos una regla
+propia del dominio (por ejemplo, “nunca almacenar datos reales de pacientes en el repositorio ni en los
+ejemplos”).
+E t a p a 	 6 . 	 C i c l o 	 O P S X 	 s o b r e 	 u n 	 c h a n g e 	 ( e x p l o r e 	 → 	 p r o p o s e 	 → 	 a p p l y 	 → 	 v e r i f y 	 → 	 a r c h i v e )
+Con el proyecto fundado, elijan un único change de CHANGES.md y llévenlo por el ciclo completo.
+6 . 1 	 C ó m o 	 e l e g i r 	 e l 	 c h a n g e
+Tiene que pertenecer al MVP que ustedes mismos recomendaron en la sección D.
+Tiene que tener reglas de negocio veriﬁcables. Ejemplo recomendado: “Crear un turno evitando
+solapamientos por profesional y por sillón/box”. Otros válidos: “Reprogramar un turno” o “Cancelar un turno y
+liberar el horario”.
+Tiene que ser lo bastante chico como para terminarse: una sola funcionalidad, no un módulo.
+La elección se justiﬁca por escrito (dos o tres líneas) en el proposal.md.
+6 . 2 	 L a s 	 c i n c o 	 f a s e s
+Explore: relevar el problema y el estado del código antes de proponer nada. Guardar el resultado o un
+resumen del relevamiento.
+Propose: generar los artefactos del change (proposal.md, design.md, specs/ y tasks.md). Los escenarios
+de la especiﬁcación tienen que estar redactados como comportamiento veriﬁcable (dado / cuando / entonces)
+y cubrir al menos 3 escenarios: uno feliz, uno de error de negocio y uno de borde (por ejemplo, un turno que
+empieza justo cuando termina otro). No aprueben a la primera: lean el spec completo y usen Ajustar si el
+alcance quedó de más, de menos o inventado.
+Apply: implementar contra la especiﬁcación aprobada, sin decisiones de diseño improvisadas. Si algo no estaba
+en el spec, no se inventa en Apply: se vuelve a Propose. El stack tecnológico lo deﬁnen ustedes, según lo que
+hayan dejado en la knowledge-base; la implementación puede ser una API o un módulo con su lógica de
+dominio, no hace falta interfaz gráﬁca.TECNICATURA UNIVERSITARIA
+EN PROGRAMACION
+6
+Metodologia IVerify: correr los tests y los health checks. Debe haber tests automatizados que cubran cada escenario del
+spec. No se pasa a Archive con algo en rojo. Si su instalación no ofrece una fase de veriﬁcación como comando
+propio, ejecuten la suite de tests a mano y documenten el resultado.
+Archive: cerrar el ciclo. El change debe quedar archivado y el estado del proyecto actualizado.
+E t a p a 	 7 . 	 M e m o r i a 	 d e l 	 a g e n t e 	 ( E n g r a m )
+Mostrar qué quedó guardado en Engram sobre este proyecto (decisiones, hallazgos, convenciones).
+Hacer una consulta real que recupere contexto de una sesión anterior y explicar cómo eso evita que el agente
+arranque de cero. Esta evidencia se muestra en el video.
+E N T R E G A B L E S 	 Y 	 C Ó M O 	 D E B E 	 V E R S E 	 E L 	 R E S U L T A D O
+1 . 	 R e p o s i t o r i o 	 ( l i n k 	 o 	 . z i p )
+Con esta estructura mínima (los nombres exactos de algunos archivos pueden variar según la versión instalada de
+cada skill; lo importante es que estén todos los elementos):
+turnos-odontologia/
+├── AGENTS.md
+├── CLAUDE.md
+├── CHANGES.md
+├── .active-orchestrator-state.json
+├── .atl/
+│   └── skill-registry.md
+├── docs/
+│   └── discovery/
+│       ├── informe-discovery.md
+│       └── informe-discovery.pdf
+├── knowledge-base/          (los 10 archivos canónicos)
+├── openspec/
+│   ├── specs/               (specs vigentes)
+│   └── changes/
+│       └── archive/
+│           └── AAAA-MM-DD-crear-turno-sin-solapamientos/
+│               ├── proposal.md
+│               ├── design.md
+│               ├── tasks.md
+│               └── specs/
+├── src/                     (implementación del change)
+├── tests/                   (tests de cada escenario)
+└── README.md                (cómo instalar y correr los tests)
+El repositorio debe poder clonarse y ejecutar los tests siguiendo únicamente el README.md.
+El historial de commits debe mostrar el proceso (fundación, discovery, change), no un único commit ﬁnal. En
+grupo, cada integrante tiene commits propios.
+Sin secretos: ninguna clave de API ni credencial en el repositorio.TECNICATURA UNIVERSITARIA
+EN PROGRAMACION
+7
+Metodologia I2 . 	 I n f o r m e 	 d e 	 D i s c o v e r y 	 ( P D F )
+Documento profesional con este orden:
+1. Portada (título, materia, integrantes, fecha).
+2. Resumen ejecutivo (máximo una página): qué se investigó, principales hallazgos y qué MVP se recomienda.
+3. A. Tabla comparativa de al menos 15 sistemas, ordenada por relevancia para Argentina. Cada ﬁla con nombre,
+proveedor, país, URL oﬁcial y fecha de consulta. Las celdas sin evidencia pública dicen “No evidenciado”.
+Ejemplo del formato esperado de cada ﬁla:
+Producto /
+ProveedorPaís ·
+SegmentoReserva online Recordatorios Fuente y fecha
+[Product o
+ejemplo]
+[Empr esa][País] ·
+Consult orioCompr obado (enlace
+públic o de r eser va)No
+evidenciado[URL del cen tro de a yuda] ·
+consult ada el AAAA -MM-DD
+4. B. Matriz de puntuación de 0 a 5 con los pesos indicados y el total ponderado por sistema. Debe incluir una
+nota metodológica breve: qué signiﬁcó cada nota y cómo se trataron los datos “No evidenciados”.
+5. C. Análisis competitivo en cuatro subsecciones (estándar de mercado, diferenciadores reales, vacíos del
+mercado argentino, oportunidades de innovación).
+6. D. Recomendación ﬁnal con los cinco competidores para demo, los tres productos de referencia de experiencia
+de usuario y el MVP dividido en tres listas: imprescindible, diferenciador y etapas posteriores.
+7. Veriﬁcación de fuentes: las 5 (o más) fuentes que comprobaron ustedes, qué aﬁrmaba el informe, qué
+encontraron y qué corrigieron.
+8. Referencias completas.
+En todo el informe se distingue entre “funcionalidad comprobada” (la muestra el producto, la documentación o
+un video oﬁcial) y “aﬁrmación comercial” (lo dice el proveedor sin demostrarlo). Recomendación: un informe claro
+y bien fundado vale más que uno largo.
+3 . 	 V i d e o 	 d e 	 d e f e n s a 	 ( 8 	 a 	 1 2 	 m i n u t o s )
+Todos los integrantes aparecen y hablan. Cámara encendida al menos en la presentación de cada uno.
+Contenido y orden sugeridos: (1) qué producto eligieron y qué concluyó el Discovery, con el MVP
+recomendado; (2) recorrido por el repositorio: knowledge-base, roadmap y AGENTS.md; (3) el change elegido,
+mostrando el momento real en que revisaron Propose y qué corrigieron con Ajustar; (4) Apply/Verify: los tests
+pasando; (5) Archive y estado ﬁnal; (6) consulta a Engram; (7) conclusiones.
+Se muestra la pantalla trabajando de verdad, no solo diapositivas.
+Cada integrante explica la etapa de la que fue responsable.
+4 . 	 R e f l e x i ó n 	 e s c r i t a 	 ( 1 	 a 	 2 	 p á g i n a s )
+Documento breve, redactado por ustedes (no generado por el agente), que responda:TECNICATURA UNIVERSITARIA
+EN PROGRAMACION
+8
+Metodologia I¿Qué información del Discovery resultó incorrecta, no veriﬁcable o inventada por el agente? ¿Cómo lo
+detectaron?
+¿En qué etapa usaron Ajustar, qué estaba mal y qué habría pasado si hubieran apretado Continuar?
+¿Qué diferencia notaron entre implementar con una especiﬁcación aprobada y pedir código con un prompt
+suelto?
+¿Qué parte de la fundación (knowledge-base, roadmap, reglas) le aportó más valor al ciclo OPSX y cuál menos?
+En grupo: qué hizo cada integrante y en qué etapa.
+C R I T E R I O S 	 D E 	 E V A L U A C I Ó N
+Criterio Qué se observa Puntos
+Informe de
+DiscoveryComple titud de A -D, 15 sis temas c omo mínimo , fuen tes con URL y f echa, uso
+correcto de “No e videnciado” , distinción en tre compr obado y c omer cial, crit erio
+crític o en C y D .25
+Veriﬁc ación de
+fuen tesCompr obar on per sonalmen te al menos 5 fuen tes y c orrigier on lo que no es taba
+respaldado.10
+Fundación del
+proyectoKnowledg e-base c oher ente con el Disc overy, roadmap alineado c on el MVP ,
+AGENTS.md/CLAUDE.md con reglas r evisadas, r egistro de skills g ener ado.20
+Chang e OPS X Elección jus tiﬁcada, spec c on al menos 3 escenarios v eriﬁc ables, implemen tación
+ﬁel al spec, t ests por escenario en v erde, chang e archivado.25
+Video de de fensa Claridad, se v e el pr oceso r eal, participación de t odos los in tegrantes, e videncia
+de Engr am.10
+Reﬂexión escrit a Hones tidad y pr ofundidad; e videncia de uso r eal del pr otocolo de inspección. 5
+Trazabilidad y
+participaciónHistorial de c ommits c on el pr oceso , README r eproducible, sin secr etos, aport e
+individual demos trable.5
+Total 100
+C O N S I D E R A C I O N E S
+✅ Uso responsable de la IA: el agente es una herramienta de trabajo, no el autor. Todo lo que se entregue tiene
+que haber sido leído, entendido y validado por ustedes.
+✅ Veriﬁcar antes de conﬁar: las URLs, precios y funcionalidades pueden cambiar o estar mal citados. La fecha de
+consulta es obligatoria.TECNICATURA UNIVERSITARIA
+EN PROGRAMACION
+9
+Metodologia I✅ No aprobar en automático: el tiempo que se dedica a ajustar en las etapas iniciales se ahorra después, cuando
+implementan.
+✅ Datos de pacientes: no usen datos reales de personas. Todos los ejemplos, pruebas y capturas deben usar
+datos ﬁcticios.
+✅ Independencia de los productos analizados: se analizan con ﬁnes educativos; no se contactan proveedores ni
+se crean cuentas con datos personales reales para evaluarlos.
+✅ Autoría: el trabajo debe ser propio. El uso de IA se declara y se explica en la reﬂexión.
+✅ Alcance realista: es mejor un solo change bien especiﬁcado, probado y archivado que varios a medias.
+C O N C L U S I O N E S 	 E S P E R A D A S
+Poder conducir un proyecto desde una idea hasta una funcionalidad terminada, con cada decisión respaldada
+por evidencia y registrada en archivos versionables.
+Distinguir entre información veriﬁcada e información plausible generada por un agente, y saber cómo
+comprobarla.
+Usar el protocolo de inspección (Continuar / Ajustar / Parar acá) con criterio propio, entendiendo que corregir
+temprano es más barato.
+Experimentar en primera persona que una especiﬁcación aprobada funciona como contrato de
+implementación y permite veriﬁcar el resultado con tests.
+Reconocer el rol de la memoria persistente y de las reglas del agente (AGENTS.md) para sostener el trabajo
+entre sesiones.TECNICATURA UNIVERSITARIA
+EN PROGRAMACION
+10
+Metodologia I

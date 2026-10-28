@@ -223,7 +223,7 @@ GATE 8: C-08, C-13, C-17, C-20 ✓
   - `knowledge-base/06_funcionalidades.md` §US-009 y §US-021
 
 ### [C-07] `create-appointment-overlap-prevention`
-- **Estado**: `[ ]` pendiente
+- **Estado**: `[x]` completado
 - **Scope**:
   - Tablas `appointment` y `appointment_status_history`.
   - Validación de rango temporal de la prestación (`tstzrange` en UTC) contra agenda del profesional y ocupación del sillón.
