@@ -1,0 +1,1168 @@
+Discovery — Gestión de turnos y agenda
+odontológica (Argentina)
+Fecha de investigación: 22/10/2026
+Alcance: Argentina (primario) · Latinoamérica · internacionales relevantes como referencia
+Método: relevamiento en sitios oficiales, páginas de precios, centros de ayuda, documentación de API, stores y
+reseñas. Cada dato lleva etiqueta de evidencia.
+Leyenda: [verified] = documentado público · [claim] = afirmación comercial del proveedor, no auditada ·
+[no evid.] = no evidenciado públicamente (no implica que no exista)
+Advertencia metodológica. No existe conteo oficial de odontólogos ni de penetración de software en Argentina
+(datos.gob.ar sólo publica series de medicina; SSSalud devolvió 503). Todo dato de mercado es autodeclarado por
+proveedores y debe tratarse como benchmark, no como tamaño de mercado.
+1. Resumen ejecutivo
+El mercado argentino no compite por agenda: la agenda diaria/semanal multi-profesional, la historia clínica con
+odontograma y el recordatorio por WhatsApp son commodities desde 2020. La competencia real está en cuatro
+frentes:
+1. WhatsApp automatizado de punta a punta (no sólo recordatorio: confirmación, recontacto, recuperación,
+lista de espera).
+2. Obras sociales y prepagas: validación de prestaciones, topes, autorizaciones y liquidación.
+3. Facturación electrónica ARCA integrada al cobro.
+4. Precio y transparencia: los jugadores fuertes (Dentalink, Bilog, DentalTec) no publican precios; los baratos
+(Odonto.ar, Odonthia) no liquidan obras sociales ni facturan.
+Hueco principal detectado: ningún producto argentino combina agenda multi-sillón + reserva online +
+recordatorios automáticos + obras sociales + ARCA a precio PyME y con precio público en pesos. O se tiene
+profundidad administrativa a precio opaco (DentalTec, Bilog), o precio claro sin administración (Odonto.ar,
+Odonthia), o ambas cosas pero en dólares y sin ARCA (DentalCore, Órbita).
+Segundo hueco, estructural: ningún competidor argentino ofrece API pública documentada. No hay
+ecosistema, no hay integración con IA de terceros, no hay portabilidad real. Es a la vez una barrera de entrada baja y
+una oportunidad de posicionamiento.
+A. Tabla comparativa
+A.1 — Argentina y operación local (ordenada por relevancia) - Parte 1
+(Continúa en la página siguiente debido al volumen de datos)
+Discovery — Gestión de turnos y agenda Página 1#ProductoSegmento ModalidadAgenda / turnos AutomatizaciónClínica
+1DentalSoft
+(DentalSoft,
+AR)Consultorio y
+clínica
+chica/medianaNube Semanal/diaria/mensual,
+drag&drop, urgencias,
+sobreturnos con
+detección de
+solapamiento,
+bloqueos/feriados, multi-
+sucursal, Google
+Calendar [verified].
+Sillón explícito
+[no evid.]Recordatorios
+WhatsApp/email,
+cobro de deudas,
+recuperación,
+reseñas Google,
+recepcionista virtual
+IA
+[verified/claim]Ficha,
+odontograma FDI
+18 estados con
+historial,
+ortodoncia, planes,
+consentimientos
+con firma, recetas
+[verified].
+Periodontograma
+[no evid.]
+2Dentalink
+(Healthatom,
+CL — opera
+en AR)Clínica
+mediana/grande
+multi-sedeSaaS webVista por sillón,
+sobreagendamiento en
+agenda paralela,
+reprogramación masiva,
+tiempos por odontólogo,
+sala de espera
+[verified]. Bloqueos
+[no evid.]Recordatorios
+WA/email, tareas de
+citas, morosidad,
+captura, NPS,
+campañas
+[verified]HC, odontograma
+y
+periodontograma,
+ortodoncia,
+estética facial,
+telemedicina, firma
+y recetas como
+adicionales
+[verified]
+3DentalTec
+(Tándem,
+AR)Institucional:
+círculos,
+federaciones,
+gerenciadorasSaaS webTurnos configurables
+por
+odontólogo/día/intervalo,
+recordatorios
+[verified]. Sillón,
+sobreturnos y reserva
+online [no evid.]Recordatorios
+automáticos,
+confirmación WA
+(−40% ausentismo)
+[claim];
+recuperación
+[no evid.]HC, odontograma
+con caras y
+patologías CIE-10,
+imágenes con
+registro temporal
+[verified].
+Perio
+[no evid.]
+4Bilog
+(Bilog, AR)Consultorio y
+clínica; fuerte
+en círculosHíbrida
+(local o
+cloud)Diaria (free) y semanal,
+multi-profesional y multi-
+consultorio, estados
+[verified]. Sillón,
+sobreturnos
+[no evid.]Recordatorios WA,
+confirmaciones,
+iAngela (IA
+texto/voz), resumen
+radiografías
+[claim].HC con
+anamnesis,
+odontograma
+interactivo,
+imágenes 1–2 GB,
+recetas
+[verified].
+Perio
+[no evid.]
+5DentalCore
+(Di Tullio,
+AR)Odontólogo
+clínico y clínica
+chicaSaaS webMulti-doctor, vistas
+día/semana, mapa calor,
+kanban, bloqueos,
+superposición
+[verified]. Sillón
+[no evid.]25 tipos de tareas:
+confirmación 48/24 h
+con link, post-
+operatorio,
+controles, recall,
+recuperaciónHC, odontograma
++50 hallazgos,
+periodontograma
+6 sitios, recetas,
+22
+consentimientos
+Discovery — Gestión de turnos y agenda Página 2A.1 — Argentina y operación local (Continuación)
+#ProductoSegmentoAgenda / turnosAutomatizaciónClínica Admin /
+fiscalInteg
+6Órbita (AR)Clínica,
+recepción,
+alto vol. WAAgenda por sillón
+con "choque
+imposible",
+agendamiento
+inteligente
+[verified].Confirmación
+48/24h, recontacto,
+Juez IA que detecta
+urgencias
+[verified/claim]Ficha con
+odontograma y
+periodontograma,
+dictado voz, HC
+firmada
+[verified]Cobranzas,
+convenios,
+liquidaciones,
+Mercado
+Pago
+[verified]
+. ARCA
+[no evid.]Wha
+Clou
+oficia
+Dent
+7Odonto.ar
+(AR)Indiv. y
+clínica chicaDía/semana/mes,
+drag&drop,
+duración motivo
+[verified].Sin motor de
+recordatorios,
+recuperación ni
+campañas
+evidenciado
+[no evid.]HC, odontograma
+autor/fecha,
+radiografías,
+planes
+[verified].Panel
+finanzas, OS
+cálculo
+OS/paciente
+[verified]
+. ARCA
+[no evid.]Impo
+[no 
+8Odonthia
+(AR)Consultorio
+unipersonalReserva online
+como solicitud a
+aprobar
+[verified].Recordatorio WA
+solo planes pagos;
+resumen pac.,
+dictado
+[verified].Ficha Ley 26.529,
+odontograma FDI,
+firmas Ley 25.506
+[verified].Tarifario
+copago; no
+liquida OS,
+no valida, no
+emite ARCA
+[verified]
+.Impo
+What
+9AgendaPro
+(CL/MX)Generalista
+salud/bellezaMulti-profesional,
+reserva online
+[verified].Recordatorios,
+confirmación,
+campañas
+[verified]Ficha
+personalizable.
+Sin odontograma
+[verified]Pagos,
+reportes; sin
+OS ni ARCAAPI s
+10Ninsaúde
+(BR)Redes
+(white-label)Agenda por
+profesional/unidad,
+sesiones
+[verified].Confirmación 1-2
+días, pago online
+[verified].Odontograma
+geométrico 2
+dígitos cara/raíz,
+dictado IA
+[verified].Financiero,
+convenios,
+stock,
+comisiones
+[verified]API p
+desa
+BI
+11Clinicorp
+(BR)FranquiciasMulti-profesional,
+check-in QR
+[verified].Confirmaciones
+WA/SMS, alertas,
+agentes IA
+[verified/claim]Prontuario,
+anamnesis firma,
+odontograma
+[verified].Clinipay,
+NFS-e,
+conciliación,
+SPC
+[verified]Radio
+Imag
+12Feegow
+(BR/AR)Centros
+multi-esp.Diaria/semanal,
+check-in, cambios
+masa
+[verified].Recordatorios
+email/SMS
+[verified].Prontuario, laudos.
+Sin odontograma
+[no evid.]Financiero,
+TISS/glosas,
++60 reportes
+[verified]API p
+docu
+13iClinic (BR)Médicos (no
+dental)Médica, booking
+online
+[verified].WA (add-on),
+secuencias email
+[verified].Prescripción firma.
+Sin odontogramaFinanciero,
+repases,
+TISS
+[verified]What
+on
+14Dental
+Office (BR)Autónomo a
+clínicaAgenda
+confirmación
+automática WA
+[verified].Confirmación, CRM,
+asistente voz IA
+[verified]Fichas
+especialidad,
+evolución voz.Financiero,
+NFS-e, links
+pago
+[verified]Medi
+Discovery — Gestión de turnos y agenda Página 3Registro de modificaciones a la tabla A.1 (22/10/2026)
+Sitios web verificados: dentalsoft.com.ar, softwaredentalink.com/ar, web.dentaltec.com.ar,
+bilog.com.ar, dentalcore.app, hiorbita.com, cualsistema.com, y documentación de ayuda de cada
+proveedor.
+Las siguientes correcciones se realizaron tras verificar la información en los sitios oficiales de cada proveedor:
+1. DentalSoft (fila 1): Precio corregido de "ARS 30.000/mes (1 prof.) · ARS 60.000/mes (Pro) · 3 meses gratis ·
+WhatsApp USD 0,026/msg" a "No publica precio (verificado en sitio oficial y terceros 15/10/2026)". DentalSoft
+no publica precios en su sitio web oficial.
+2. Dentalink (fila 2): Corrección en columna "Admin / fiscal": de "ARCA [no evid.]" a "Boletas electrónicas
+(Chile/latam) [verified]; ARCA Argentina [no evid.]".
+3. Bilog (fila 4): Corrección en columna "Admin / fiscal": de "ARCA y MP [no evid.]" a "Factura electrónica
+(solo Argentina, versión 7.6.0) [verified]. MP [no evid.]". La app en Google Play indica "Añadido factura
+electrónica (Sólo Arg.)".
+4. Órbita (fila 6): Corrección en columna "Admin / fiscal": de "MP y ARCA [no evid.]" a "Mercado Pago (link
+de pago disponible) [verified]. ARCA [no evid.]". Se encontró link de pago activo.
+A.2 — Internacionales de referencia (patrones de producto, no competencia directa)
+#Producto (país)Agenda / turnosClínica Admin API Precio
+publicado
+15Dentally
+(UK/AU)Online booking,
+recalls, "short-
+notice filler"
+[verified]Odontograma
+dentición mixta,
+periodontograma
+comparativo, AI
+notes
+[verified]Billing y claims
+UK, reporting
+real-timeREST pública +
+sandbox
+(developer.dentally)
+[verified]desde
+£134/mes
+16Cliniko (AU)Booking online,
+calendario,
+recordatorios
+SMS/email
+[verified]Historias y
+adjuntos; sin
+odontograma
+[no evid.]Facturas,
+pagos, billable
+itemsREST pública,
+docs excelentes
+[verified]USD 45–
+395/mes
+17Open Dental
+(US)Multi-sillón, Web
+Sched; API
+lee/escribe turnos
+[verified]Odontograma
+gráfico, perio,
+planes, imágenes
+[verified]Seguros,
+claims, pagos,
+reportesAPI REST pública,
+CRUD, la más
+profunda
+[verified]USD 199/mes
+año 1
+18Dentrix/Ascend
+(US)Online
+scheduling,
+elegibilidad
+(Ascend)
+[verified]Perio, imaging 3D,
+notas automáticas
+[verified]Claims/RCM
+maduro;
+reporting
+criticado
+[claim]API Exchange 700-
+1000 endpoints,
+solo vendors
+[claim]No publica
+19Curve Dental
+(US/CA)Online
+scheduling,
+patient
+engagement
+[verified]Charting, perio,
+planes, UX
+moderna
+[verified]Billing,
+insurance,
+claimsOpen Orange
+gated, sin API self-
+serve [verified]No publica
+20Denticon (US)Scheduling multi-
+sede, MyTooth
+(2026) [claim]Charting,
+treatment plans,
+Apteryx XVWebRCM, claims,
+analytics con
+IAREST+webhooks,
+onboarding gated
+[claim]No publica
+21tab32 (US)Scheduling,
+AutoRemind, focoCharting, imaging
+con IA, ortodonciaBilling, claims,
+elegibilidadOpen API sólo
+plan SummitUSD 125/mes
+año 1
+Discovery — Gestión de turnos y agenda Página 4A.3 — Operación, seguridad, adopción y balance por sistema
+Cubre las dimensiones que no entran en el ancho de la tabla A.1: operación, roles, auditoría, exportación, soporte,
+seguridad, adopción y fortalezas/limitaciones.
+#SistemaRoles /
+AuditoríaExportación
+/ SoporteSeguridad y
+cumplimientoAdopción
+publicadaFortalezas / limitaciones
+1DentalSoftPermisos por
+rol
+[verified]
+. Auditoría
+[no evid.]Exp. a la baja
+[claim].
+Soporte
+WA/email
+directo
+[verified]Ley 25.326;
+multi-tenant
+base aislada;
+hash pass;
+retención 30
+días post-baja
+[verified]+300 clínicas,
+4,9/5
+[claim];
+testimonios sin
+vol. verificableF: sobreturnos con solapamiento,
+liquidaciones con PDF, reserva 4
+pasos. L: sin perio, sin API, sin
+ARCA, sin precio público.
+2DentalinkRoles por
+plan
+[verified]
+. Auditoría
+[no evid.]A la baja
+[claim].
+Chat/email/tel
+[verified]ISO 27001,
+HIPAA, GDPR;
+DPA publicado
+[verified]+15.000
+clientes
+LATAM, 16
+años
+[claim]F: clínica profunda + vista sillón +
+IA. L: precio opaco; borra cuenta
+a los 30 días impago; sin of. en
+AR.
+3DentalTec10 roles.
+Auditoría
+completa
+(quién, qué,
+cuándo)
+[verified]Exp.
+[no evid.]
+. Soporte
+24/7,
+tutoriales YT
+[verified]JWT, bcrypt,
+Helmet/CORS;
+trazabilidad
+100%
+[verified];
+sin pol.
+privacidad
+visible+2.000
+profesionales,
+30+ instit., 5
+círculos
+[claim]F: validación online OS + ARCA +
+cierre multinivel. L:
+agenda/reserva online poco
+evidenciada; sin precio público.
+4Bilog Permisos por
+rol
+[verified]CSV a la baja
+[verified]
+. Soporte
+local;
+migración sin
+costo
+[verified]Ley 25.326;
+backups en
+nube; usuario
+responsable de
+datos de salud
+[verified]+1.500
+clínicas,
++5.000
+usuarios,
++10M
+pacientes
+[claim]F: antigüedad + OS + modalidad
+híbrida. L: UX envejecida; sin API;
+sin periodontograma.
+5DentalCore4 roles.
+Auditoría
+inmutable
+con 2FA
+[verified]Total, aun
+cuenta
+suspendida
+[verified]
+. Soporte del
+fundador
+[verified]Base aislada,
+TLS, backup
+cifrado AES-
+256-GCM (8
+copias), scrypt;
+Ley 25.326
+[verified]Sin clientes
+publicados
+[claim]F: ARCA nativo + WhatsApp oficial
++ clínica profunda. L: sin trial, en
+dólares, sin base clientes.
+6Órbita Roles y log
+de accesos
+[verified]Total
+[verified]
+. Migración
+sin cargo,
+impl. 30 días
+[verified]AWS
+[verified];
+certificaciones
+[no evid.]145k msgs y
+806 turnos
+agendados por
+bot en 30d
+[claim]F: IA conversacional + agenda por
+sillón. L: el core está en preventa;
+precios USD; sin ARCA.
+7Odonto.arRoles y
+permisos
+[verified]Exp.
+[no evid.]
+. Soporte
+prioritario
+[verified]Supabase
+cifrado, RLS;
+Ley 25.326 y
+AAIP
+declaradas
+[verified][no evid.]F: precio claro y fricción mínima.
+L: sin motor de recordatorios ni
+recuperación.
+8Odonthia[noevid]Exp/imp;Firma[noevid]F:freemiumrealquepresiona
+Discovery — Gestión de turnos y agenda Página 5A.3 — Operación, seguridad, adopción y balance (Continuación)
+#SistemaRoles /
+AuditoríaExportación /
+SoporteSeguridad y
+cumplimientoAdopción
+publicadaFortalezas / limitaciones
+10NinsaúdeRoles por
+unidad
+[verified]Entrenamiento
+gratis
+[verified]LGPD, HIPAA
+[verified]Casos
+Unicamp,
+Zerenia
+[claim]F: odontograma por caras +
+white-label + ES. L: sin precios
+públicos; sin AR.
+11ClinicorpUsuarios ilim.
+con perfiles
+[verified]Migración en 3
+días. Soporte
+bots 24h
+[verified]LGPD;
+prontuario
+cifrado
+[verified]+32 mil
+clínicas, +200
+mil
+profesionales
+[claim]F: profundidad financiera + WA.
+L: sólo portugués;
+implementación paga
+obligatoria.
+12FeegowPermisos por
+usuario
+[verified]Migración
+asistida.
+Soporte 0800
+[verified]Cert. SBIS
+NGS2, LGPD,
+AWS
+[verified]Contadores
+públicos en 0
+[no evid.]F: API pública + ecosistema
+Doctoralia. L: sin odontograma:
+brecha crítica.
+13iClinic[no evid.]Export
+autoservicio
+[verified].
+Chat, tel, WA
+[verified]LGPD
+[verified];
+HIPAA
+[claim]+70 mil prof.
+en 22 países
+[claim]F: onboarding y autoservicio. L:
+sin odontograma ni ortodoncia.
+14Dental
+Office[no evid.]Soporte
+humano + bot
+24h [claim]LGPD
+declarada
+[verified][no evid.]F: precio agresivo + paquete
+fiscal. L: profundidad clínica poco
+evidenciada; huella nula fuera de
+BR.
+15DentallyRoles
+[verified]Onboarding
+estándar
+[verified]Certificación no
+detallada
+[no evid.]50.000
+practitioners
+[claim];
+Capterra UK
+3,6/18F: dental + API + precio visible. L:
+reputación mixta y quejas de
+soporte.
+16ClinikoRoles
+[verified]Export;
+retención 90
+días post-canc.
+[verified]AWS ISO
+27001, AES-
+256,
+HIPAA/GDPR,
+2FA
+[verified]65.000
+profesionales
+en 95 países
+[claim];
+4,7/24F: simplicidad, onboarding, API.
+L: sin odontograma ni RCM
+dental.
+17Open
+DentalPermisos por
+usuario, logs
+[verified]Datos propios
+(on-prem)
+[verified]BAA
+obligatorio;
+SOC 2 público
+[no evid.]4,6/89 en
+Capterra
+[claim]F: API más profunda; costo
+transparente. L: on-premise, UX
+tradicional.
+18Dentrix /
+AscendRoles
+[verified]
+. Auditoría
+[claim]Plan soporte
+pago
+[claim]SOC 2 Type II
+en API; HIPAA
+[claim]4,3/378 y
+4,1/235F: ecosistema y flujo seguros. L:
+opacidad, add-ons, reporting
+criticado.
+19Curve
+DentalRoles
+[verified]Soporte
+[verified]Certificaciones
+[no evid.]4,4/285;
+80.000
+profesionales
+[claim]F: UX visual moderna, all-in-one.
+L: API cerrada, precio opaco.
+20DenticonRoles
+[verified]Onboarding
+partnerSOC 2 Type 2
+y HIPAA13.000
+practices,F: RCM y escala DSO. L:
+enterprise, opaco, onboarding
+Discovery — Gestión de turnos y agenda Página 6A.4 — Modelo comercial detallado
+#SistemaPrueba /
+Plan gratisPrecio publicado MonedaModalidad de
+cobroCostos adicionales visibles
+1DentalSoft3 meses
+[claim] /
+NoNo publica
+[verified]
+(22/10/2026)— Mensual, sin
+permanencia
+[claim]WhatsApp USD
+0,026/mensaje [claim]
+2DentalinkDemo
+[verified]
+/ NoNo publica —
+cotización [verified]— Mensual,
+semestral o
+anualTelemedicina, firma y recetas
+3DentalTec[no evid.]
+/ NoNo publica — demo a
+pedido [verified]USD
+(packs)[no evid.]Packs WhatsApp USD 9 / 25
+/ 48 (50/150/300 msg)
+4Bilog Freemium
+perm.
+[verified]
+/ Sí (1 prof,
+50 pac)Lite y Premium por
+cotización— Mensual, sin
+permanenciaServicios técnicos extra
+cobrados
+5DentalCoreNo (reemb
+14d)
+[verified]
+/ NoUSD 50/mes (2 us.);
+USD 10 us. extra; 30%
+off 6mUSDMensual Videoconsulta USD 0,50
+6Órbita[no evid.]
+/ NoUSD 25/mes Cons. ·
+USD 113/mes Clín. ·
+sedes extra USD 120USDPesos o USDT;
+dctos por plazoChat IA USD 200/mes (15k
+mensajes)
+7Odonto.ar30 días
+[verified]
+/ NoUSD 29 / 49 / 99 (1/5/10
+usuarios)USD
+(cobro
+ARS al
+día)Mensual, sin
+permanencia—
+8OdonthiaN/A / Sí, sin
+vto (2GB)ARS 20.900/mes (IA) ·
+ARS 46.900/mes (Max)ARS
+(IVA inc)Mensual MP;
+anual 2m gratisConsumo de IA por créditos
+9AgendaProSí
+[verified]
+/
+[no evid.]ARS 13.900 a 314.900ARS
+(IVA inc)Mensual WhatsApp desde ARS
+7.900/mes (50 msg); API en
+Pro
+10Ninsaúde[no evid.]
+/ NoNo publica — PIX, boleto o
+tarjeta[no evid.]
+11Clinicorp[no evid.]
+/ NoR$159,90/mes Std ·
+R$369,90 PremBRLTarjeta; sin
+fidelidadImplementación obligatoria
+con costo único; IA sob
+consulta
+12FeegowSí
+[verified]
+/ NoR$129 / 199 / 249 por
+prof/mesBRLMensual[no evid.]
+13iClinic 5 días
+[verified]
+/ NoR$99 a 299 por
+prof/mesBRLMensual; anual
+8% offWhatsApp desde R$29,90;
+teleconsulta paga en planes
+base
+Discovery — Gestión de turnos y agenda Página 7A.4 — Modelo comercial detallado (Continuación)
+#Sistema Prueba /
+Plan gratisPrecio publicadoMonedaModalidad de
+cobroCostos adicionales
+visibles
+14Dental Office7 días
+[verified]
+/ NoR$39,90 a 298,54
+/mesBRLMensual o
+anual[no evid.]
+15Dentally[no evid.]
+/ No£134 a 346 /mes (3
+surgeries)GBPMensual[no evid.]
+16Cliniko 30 días
+[verified]
+/ NoUSD 45 a 395 /mes
+según prof.USDMensual, sin
+fees ocultos—
+17Open DentalGarantía 90d
+[verified]
+/ NoUSD 199/mes año 1 ·
+USD 149 después
+(≤3)USDMensual eServices; API con tiers
+dev desde USD 15/mes
+18Dentrix/Ascend[no evid.]
+/ NoNo publica —
+cotización distribuidor— Suscripción o
+licencia+soporteMódulos, hardware y
+soporte
+19Curve Dental[no evid.]
+/ NoNo publica —
+cotización
+personalizada— Mensual[no evid.]
+20Denticon[no evid.]
+/ NoNo publica — por
+ubicación y volumen— Mensual[no evid.]
+21tab32 14 días
+[verified]
+/ NoUSD 125/mes año 1
+(≤3) · USD 225 año 2+
+(≤5)USDMensual Claims USD 0,20 ·
+adjuntos USD 0,50 ·
+AutoRemind USD 69/mes
+tras año 1
+A.5 — Fuentes por sistema (URL y fecha de consulta)
+#SistemaURL oficial Documentación complementaria consultada Fecha
+1DentalSoftdentalsoft.com.ar /privacidad 22/10/2026
+2Dentalinksoftwaredentalink.com/ar/ar/planes · ayuda.softwaredentalink.com 22/10/2026
+3DentalTecweb.dentaltec.com.ar/funcionalidades · cora.org.ar/gestion-consultorios · YT 22/10/2026
+4Bilog bilog.com.ar /planes · /terms_and_conditions · Google Play 22/10/2026
+5DentalCoredentalcore.app /pricing · /faq · /privacidad 22/10/2026
+6Órbita hiorbita.com /precios · /erp · link.mercadopago.com.ar/orbitaint 22/10/2026
+7Odonto.arodonto.ar /privacidad 22/10/2026
+8Odonthiaodonthia.com /planes · /blog/mejores-software-odontologicos-argentina22/10/2026
+9AgendaProagendapro.com/ar Página de planes AR 22/10/2026
+10Ninsaúdeninsaude.com Sitio en español; casos publicados 22/10/2026
+11Clinicorpclinicorp.com Página de planes 22/10/2026
+12Feegowfeegowclinic.com.br docs.feegow.com (API pública) 22/10/2026
+13iClinic iclinic.com.br Página de precios y planes 22/10/2026
+Discovery — Gestión de turnos y agenda Página 8A.5 — Fuentes por sistema (Continuación)
+#Sistema URL oficial Documentación complementaria consultada Fecha
+14Dental Officedentaloffice.com.br Página de planes 22/10/2026
+15Dentally dentally.co/pricing developer.dentally.co 22/10/2026
+16Cliniko cliniko.com/pricing docs.api.cliniko.com · cliniko.com/security 22/10/2026
+17Open Dentalopendental.com /site/apispecification.html · /site/fees.html · /apipermissions22/10/2026
+18Dentrix/Ascenddentrix.com dentrixascend.com · henryscheinone.com/api-exchange22/10/2026
+19Curve Dentalcurvedental.com/pricingcurvedental.zendesk.com (Open Orange) 22/10/2026
+20Denticon planetdds.com/denticondeveloper.planetdds.com 22/10/2026
+21tab32 tab32.com/pricing Página de planes y modules 22/10/2026
+Limitación de fuentes. Capterra, GetApp y B2B Stack bloquearon el acceso automatizado durante el relevamiento:
+las cifras de adopción y las notas de reseñas se toman de las páginas públicas indexadas y deben considerarse
+[claim] hasta verificación manual. SSSalud devolvió 503 en el buscador de prestadores y datos.gob.ar no
+publica series de odontología.
+B. Matriz de puntuación ponderada (0–5)
+Pesos: Turnos/automatización 25% · Clínica 20% · Integraciones locales y WhatsApp 15% ·
+Admin/cobros/facturación 15% · Experiencia del paciente 10% · Seguridad/exportación/trazabilidad 10% · Precio y
+adopción 5%.
+Sistema Turnos
+(25%)Clínica
+(20%)Integ
+(15%)Admin
+(15%)Paciente
+(10%)Seguridad
+(10%)Precio
+(5%)Total
+Dentalink 4,5 5,0 3,5 3,5 4,0 5,0 1,5 4,15
+DentalCore 3,5 5,0 4,0 4,5 3,0 5,0 2,0 4,05
+Dentally 4,5 4,5 3,5 3,5 3,5 3,0 3,5 3,90
+Clinicorp 4,0 4,0 2,5 4,5 4,0 4,0 4,0 3,85
+Ninsaúde 4,0 4,0 3,5 4,5 3,5 4,0 1,5 3,83
+DentalSoft 4,5 4,0 3,5 3,5 4,0 3,5 1,5 3,81
+Dentrix/Ascend4,0 5,0 2,0 4,0 3,5 4,5 1,0 3,75
+Denticon 3,5 4,0 3,0 5,0 3,0 4,0 1,5 3,65
+Órbita 4,0 4,5 3,0 3,0 3,5 3,5 2,5 3,63
+Feegow 4,0 2,0 3,0 5,0 4,0 4,5 3,5 3,63
+Discovery — Gestión de turnos y agenda Página 9B. Matriz de puntuación ponderada (Continuación)
+Sistema Turnos
+(25%)Clínica
+(20%)Integ
+(15%)Admin
+(15%)Paciente
+(10%)Seguridad
+(10%)Precio
+(5%)Total
+Curve Dental4,0 4,5 2,0 4,0 4,0 3,0 1,5 3,58
+Cliniko 4,0 1,5 3,5 3,5 4,5 5,0 4,5 3,53
+DentalTec 2,5 3,5 4,5 5,0 2,5 4,0 2,0 3,50
+Open Dental3,5 5,0 1,5 3,0 2,5 3,5 4,5 3,38
+tab32 4,0 3,5 2,0 3,5 3,5 2,5 3,5 3,30
+Bilog 3,0 3,0 3,0 4,0 3,0 3,5 2,5 3,18
+Dental Office3,0 2,0 3,0 4,5 3,5 3,0 4,5 3,15
+iClinic (Afya)3,5 1,5 2,5 4,0 3,5 3,5 4,0 3,05
+Odonto.ar 2,5 3,5 1,5 2,0 3,5 4,0 4,5 2,83
+AgendaPro 3,5 1,0 3,0 2,5 4,0 3,0 3,0 2,75
+Odonthia 2,0 3,0 2,0 1,5 3,0 3,5 4,5 2,50
+Lectura crítica de la matriz
+El puntaje mide calidad de producto, no encaje argentino. Dentalink gana (4,15) pero no tiene oficina
+en Argentina, ni ARCA, ni circuito de obras sociales; su modelo es "convenios y reembolso de seguros", no
+prestaciones. DentalCore (4,05) es el único con ARCA + WhatsApp oficial + perfil clínico profundo, pero no tiene
+clientes publicados y cobra en dólares sin trial.
+DentalTec es el outlier más informativo: 3,50 de promedio pero 5,0 en administración/fiscal. Es el
+producto que resuelve el circuito de dinero, y precisamente por eso no le importa la experiencia del paciente (2,5).
+Ese desbalance es el que un competidor nuevo puede romper.
+La correlación negativa entre "precio/adopción" y "admin/fiscal" es casi perfecta en el mercado
+argentino: los que facturan y liquidan no publican precios (Dentalink 1,5; DentalTec 2,0; Bilog 2,5), y los que
+publican precios no facturan (Odonto.ar 2,0 admin; Odonthia 1,5 admin). Ese es el arbitraje de producto.
+Dentally (3,90) es el mejor benchmark funcional-técnico pese a ser británico: combina agenda con
+relleno de huecos, clínica profunda, API pública y precio visible. Es el patrón a copiar en arquitectura, no en
+features locales.
+C. Análisis competitivo
+C.1 — Lo que ya es estándar de mercado (no diferencia)
+1. Agenda diaria/semanal con múltiples profesionales.
+2. Historia clínica digital con odontograma interactivo (FDI, estado por pieza y cara).
+3. Reserva/agendamiento online 24/7 por link (aunque con calidad muy dispar).
+4. Recordatorio y confirmación por WhatsApp.
+5. Caja, presupuestos y planes de tratamiento.
+6. Multi-sucursal en planes medios/altos.
+7. Exportación de datos (aunque muchos la limitan al dar de baja).
+8. App móvil (parcial: Bilog sí, DentalSoft/Odonto.ar/Odonthia no).
+Consecuencia: construir cualquiera de estos ocho como "diferencial" es un error de posicionamiento. Son la tabla
+de entrada.
+Discovery — Gestión de turnos y agenda Página 10C.2 — Diferenciadores reales (verificados, no claims)
+Diferenciador Quién lo tiene Por qué es defendible
+Agenda por sillón con bloqueo de
+solapamiento ("choque imposible")DentalSoft, Órbita, Dentalink Es modelado de dominio, no UI: requiere una
+entidad sillón con disponibilidad propia
+Periodontograma de 6 sitios DentalCore, Dentalink, Órbita Nivel de detalle clínico que la mayoría no
+alcanza
+Validación online OS en tiempo
+real (topes, frecuencias,
+autorizaciones)DentalTec Convenio por convenio con cada OS: barrera de
+12–24 meses
+Facturación ARCA nativa desde
+el presupuesto cobradoDentalCore, DentalTec WSAA + wsfev1/wsmtxca + gestión de
+certificados y TA
+WhatsApp Cloud API oficial con
+IA conversacionalÓrbita (Juez IA), DentalCore Verificación de negocio en Meta + templates
+aprobados
+Relleno de huecos (short-notice
+filler) con lista de esperaDentally (no en AR) Mecanismo de ingresos directo: convierte
+cancelaciones en facturación
+API pública documentada +
+sandboxOpen Dental, Dentally, Cliniko
+(ninguno en AR)Efecto red: terceros construyen sobre el
+producto
+Exportación total aun con la
+cuenta suspendidaDentalCore Anti-lock-in como argumento comercial explícito
+Precio publicado en pesos Odonthia, AgendaPro (Odonto.ar
+en USD)Transparencia en un mercado que cotiza por
+asesor; DentalSoft no publica precio.
+C.3 — Vacíos del mercado argentino
+1. Nadie tiene lista de espera. Ni un competidor argentino la evidenció. Es la palanca más obvia: cada
+cancelación es un sillón vacío y un ingreso perdido.
+2. Nadie expone API pública. Cero ecosistema, cero integración con IA de terceros, cero portabilidad real.
+3. Facturación ARCA + obras sociales + Mercado Pago + agenda en un mismo producto, a precio
+PyME: combinaciones parciales, nunca completa.
+4. El consultorio unipersonal que atiende obras sociales queda huérfano: los baratos no liquidan OS, los
+que liquidan son caros y opacos.
+5. Auditoría/trazabilidad: sólo DentalCore y DentalTec evidencian auditoría completa. Para datos de salud (Ley
+25.326 art. 7 y 9) esto no es un lujo.
+6. Portabilidad: Dentalink elimina la cuenta a los 30 días de impago; Bilog exporta sólo CSV a la baja. En un
+mercado con datos sensibles de salud, el lock-in es un riesgo legal del cliente, no sólo comercial.
+7. Seña con Mercado Pago dentro del flujo de reserva, con liberación automática del turno si no se paga: sólo
+DentalSoft lo insinúa.
+8. Reserva online que respete las reglas del consultorio (OS aceptadas, seña, anticipación mínima, cupo):
+Odonto.ar lo hace bien, pero sin recordatorios automáticos.
+Discovery — Gestión de turnos y agenda Página 11C.4 — Oportunidades de innovación
+1. "Agenda + WhatsApp + OS + ARCA" en pesos y autoservicio. Precio público, onboarding en menos de un
+día, sin implementación obligatoria paga (que es lo que encarece Clinicorp y la opacidad de DentalTec).
+2. Lista de espera inteligente: el turno liberado se ofrece automáticamente por WhatsApp a los pacientes en
+espera, con ventana de aceptación de N minutos. Convierte cancelaciones en ingresos medibles — el mejor
+argumento de ROI para vender.
+3. Reserva con seña que libera sola: link de pago MP al reservar, expiración del turno si no se paga, devolución
+automática según política. Resuelve no-show y morosidad en un solo flujo.
+4. Copiloto de recepción: IA sobre WhatsApp oficial que responde disponibilidad, agenda, reprograma y deriva
+urgencias a un humano sin intentar diagnosticar (restricción de salud de Meta).
+5. Compliance como feature, no como letra chica: copia de HC al paciente en 48 h (Ley 26.529 art. 14)
+automatizada, consentimientos con firma electrónica, auditoría inmutable, exportación.
+6. API-first como posicionamiento: el único PMS dental argentino con API pública documentada. Habilita
+integradores, clínicas con equipo de datos y productos de IA verticales.
+7. Odontograma y periodontograma como commodity (ya lo son) y diferenciación en operación: cuánto
+tarda una recepcionista en agendar, cuántos turnos se recuperan, cuánto se cobra.
+D. Recomendación final
+D.1 — Cinco competidores prioritarios para demo
+PrioridadCompetidor Qué mirar en la demo Por qué
+1 DentalSoft Agenda con sobreturnos y solapamiento;
+flujo de liquidación OS y profesionales;
+reserva 4 pasos.Es el competidor más cercano al producto
+objetivo. No publica precios (corregido
+22/10/2026).
+2 Dentalink Vista por sillón; odontograma + perio;
+cómo resuelve obras sociales AR sin ser
+argentino.Marca el techo funcional clínico a igualar.
+3 DentalTec Validación online OS; cierre multinivel;
+facturación ARCA.Es el foso administrativo que hay que
+decidir si se ataca en v1 o en v2.
+4 Bilog Modalidad híbrida; flujo de obras
+sociales/liquidaciones; qué tan mal
+envejece la UX.Muestra el segmento conservador y el
+costo real del on-premise.
+5 DentalCore ARCA nativo, WA API oficial, auditoría
+inmutable, exportación con cuenta
+suspendida.Es el competidor nuevo con arquitectura
+más moderna; hay que saber por qué
+pierde o gana.
+ExtraÓrbita Juez IA, agenda por sillón, integración
+con Dentalink/Benty.Referencia de IA conversacional; ojo: el
+core está en preventa.
+Discovery — Gestión de turnos y agenda Página 12D.2 — Tres productos de referencia para experiencia de usuario
+1. Cliniko — la referencia de simplicidad y onboarding: agenda clara, precio transparente, API sólida. Es el estándar
+de "software de salud que no da miedo".
+2. Curve Dental — la referencia visual: charting legible, flujo todo-en-uno, sensación de producto moderno.
+3. Dentally — la referencia dental-técnica: agenda orientada a producción, relleno de huecos, API documentada con
+sandbox.
+(Referencia local de simplicidad: Odonto.ar — reserva online y precio claro, pero sin automatización. Es el
+ejemplo de "qué NO recortar": los recordatorios.)
+D.3 — MVP sugerido
+Imprescindibles (sin esto no hay producto):
+1. Agenda multi-profesional por sillón, con duración variable por prestación, bloqueos, sobreturnos y prevención
+de solapamiento.
+2. Reserva online 24/7 por link público, con reglas configurables: anticipación mínima, especialidades, obras sociales
+aceptadas, cupo.
+3. Recordatorios y confirmación por WhatsApp Cloud API oficial (template utility), con link de
+confirmar/cancelar que libera el turno.
+4. Ficha clínica + odontograma FDI + presupuestos y planes de tratamiento.
+5. Caja + cobros con Mercado Pago (link/QR) + seña al reservar.
+6. Roles y permisos + multi-sucursal + auditoría de accesos.
+7. Exportación total de datos en cualquier momento (incluso con la cuenta suspendida).
+8. Cumplimiento mínimo: consentimiento informado digital, respaldo cifrado, política de privacidad alineada a Ley
+25.326, aviso de transferencia internacional.
+Diferenciadores a construir en v1 (elegir DOS, no cinco):
+Lista de espera inteligente con oferta automática del hueco liberado (ventana de aceptación configurable).
+Facturación ARCA nativa desde el presupuesto cobrado (B/C, CAE, QR).
+Precio público en pesos + onboarding autoservicio en menos de un día (posicionamiento, no feature).
+API pública documentada con sandbox (posicionamiento de plataforma).
+Para etapas posteriores (no bloquean el lanzamiento):
+Periodontograma completo de 6 sitios (v1.1; imprescindible si el target incluye periodoncia).
+Ortodoncia con galería y seguimiento; estética facial.
+Liquidación de obras sociales con validación online (v2: requiere convenio por convenio, es el foso más
+caro).
+Receta electrónica / ReNaPDiS: decisión de alcance, no un feature. Hay que inscribir plataforma o integrarse.
+App nativa del paciente (empezar con PWA + WhatsApp).
+Campañas de marketing, NPS, fidelización, BI avanzado.
+Firma digital certificada (empezar con firma electrónica simple + evidencia de autoría).
+Facturación multi-moneda / multi-país.
+Discovery — Gestión de turnos y agenda Página 13E. Los 11 puntos del checklist (insumo para kb-creator)
+1. Problema
+Los consultorios odontológicos argentinos gestionan su agenda con una combinación de WhatsApp manual, planilla y
+agenda en papel o en un software que no se comunica con nada. El resultado es doble: sillones vacíos por
+ausencias (no-show sin reemplazo) y trabajo administrativo no facturable (confirmar uno por uno, liquidar
+obras sociales a mano, facturar en otro sistema).
+Supuesto a confirmar: que el dolor principal es el ausentismo + la carga administrativa, y no la falta de
+funcionalidad clínica.
+2. Usuarios / roles
+Odontólogo/a titular — decide la compra, atiende, quiere no perder plata.
+Recepcionista / secretaria — agenda, confirma, cobra, llama. Es el usuario que más sufre el sistema actual.
+Odontólogo/a asociado — atiende, necesita ver su agenda y su liquidación.
+Administrativo de obras sociales — valida prestaciones, liquida, factura (en clínicas).
+Paciente — reserva, confirma, cancela, paga seña.
+3. Casos de uso principales
+1. Como paciente, quiero reservar un turno desde un link de WhatsApp en menos de 1 min, para no llamar.
+2. Como recepcionista, quiero que el sistema confirme solo, para no llamar a 30 pacientes por día.
+3. Como recepcionista, quiero que al cancelarse un turno se ofrezca a la lista de espera, para no perder el sillón.
+4. Como odontólogo, quiero ver mi agenda por sillón sin superposiciones.
+5. Como administrativo, quiero liquidar OS y emitir factura ARCA desde el mismo sistema, para no duplicar carga.
+4. Competidores
+Ver secciones A y B. Los 5 prioritarios para demo: DentalSoft, Dentalink, DentalTec, Bilog, DentalCore.
+5. Funcionalidades necesarias (MVP)
+Ver D.3 "Imprescindibles" (8 ítems).
+6. Funcionalidades opcionales
+Ver D.3 "Para etapas posteriores".
+7. Reglas de negocio (a validar con el usuario)
+No se puede reservar con menos de N horas de anticipación (configurable por profesional).
+Un profesional no puede tener dos turnos superpuestos; un sillón tampoco.
+La seña puede ser obligatoria, opcional o no existir, por tipo de prestación.
+Si el paciente cancela dentro de la ventana protegida, la seña se retiene o se devuelve según política.
+La lista de espera se ofrece por orden de llegada, con ventana de aceptación de N minutos.
+Las obras sociales aceptadas se definen por profesional, no por clínica.
+Un turno confirmado por el paciente no puede ser reasignado sin su cancelación explícita.
+Los datos clínicos nunca viajan por WhatsApp (política de Meta + Ley 25.326): sólo datos mínimos de turno.
+La historia clínica no se elimina: se conserva 10 años (Ley 26.529 art. 15).
+Discovery — Gestión de turnos y agenda Página 148. Integraciones
+WhatsApp Cloud API (Meta) con BSP — recordatorios utility, opt-in explícito, ventana de 24 h.
+Mercado Pago — Checkout/link/QR para señas y cobros; evaluar marketplace/split (no evidenciado).
+ARCA — WSAA + wsfev1/wsmtxca, certificados y TA (12 h).
+Google Calendar — sincronización de agenda del profesional.
+Obras sociales — validación y liquidación (fase 2; SOAP por convenio).
+API pública propia — para terceros e integradores.
+9. Restricciones
+Datos de salud = datos sensibles (Ley 25.326 arts. 2, 7, 9): consentimiento, finalidad, seguridad reforzada.
+Transferencia internacional restringida (art. 12): afecta hosting y soporte fuera del país.
+Registro de bases de datos ante AAIP (art. 21).
+Historia clínica conservada 10 años, íntegra, inalterable, recuperable, con copia al paciente en 48 h (Ley 26.529).
+Si se emiten recetas: Decreto 345/2024 + Res. 1959/2024 (ReNaPDiS), firma electrónica/digital, vigencia 30/60
+días.
+Facturación: RG 5866 de ARCA incorpora obligados por etapas (desde 1/10/2026 inst. médicas privadas).
+WhatsApp: opt-in por categoría, templates aprobados, prohibición de datos clínicos/telemedicina.
+10. Riesgos
+Compliance subestimado: creer que es "un turnero" cuando en realidad toca historia clínica, receta y
+facturación.
+Dependencia de WhatsApp: cambios de precio o política de Meta pueden romper el modelo de costos (hoy
+utility USD 0,0260/msg).
+Dependencia de ARCA: caídas, vencimiento de TA/certificados →  bloqueo de facturación.
+Obras sociales: el foso es caro y lento (convenio por convenio); si se promete en v1, se retrasa el lanzamiento.
+Precio en dólares en un mercado en pesos: riesgo de rechazo comercial (DentalCore, Órbita).
+Ausencia de datos de mercado oficiales: no hay conteo de odontólogos ni de penetración; el TAM es una
+estimación.
+Competencia con marca y canal: Docplanner ya opera en Argentina vía Doctoralia; CORA distribuye
+DentalTec a círculos.
+Lock-in percibido: si no hay exportación real, el cliente lo va a preguntar antes de comprar.
+11. Preguntas abiertas
+1. ¿El producto emite recetas? (define si hay que inscribirse en ReNaPDiS o integrarse)
+2. ¿Se ataca la liquidación de obras sociales en v1 o v2?
+3. ¿Segmento inicial: consultorio unipersonal, clínica chica (2–5 sillones) o ambos?
+4. ¿Precio en pesos fijo o indexado? ¿Con qué referencia?
+5. ¿Modelo de cobro de WhatsApp: incluido en el plan o por mensaje?
+6. ¿Multi-sucursal desde el día uno o sólo profesional único?
+7. ¿Qué se hace con la migración de datos desde Dentalink/Bilog/DentalSoft?
+8. ¿Se ofrece app nativa del paciente o PWA + WhatsApp?
+9. ¿Quién es el responsable del tratamiento de datos: el SaaS, la clínica, o ambos (corresponsables)?
+10. ¿Dónde se hostea? (define si hay transferencia internacional)
+Discovery — Gestión de turnos y agenda Página 15F. Fuentes principales (consulta 22/10/2026)
+Argentina
+dentalsoft.com.ar · /privacidad
+softwaredentalink.com/ar · /ar/planes · ayuda.softwaredentalink.com
+web.dentaltec.com.ar · /funcionalidades · cora.org.ar/gestion-consultorios
+bilog.com.ar · /planes · /terms_and_conditions
+dentalcore.app · /pricing · /faq
+hiorbita.com · /precios
+odonto.ar · /privacidad
+odonthia.com/planes
+agendapro.com/ar
+Latinoamérica
+clinicorp.com
+feegowclinic.com.br · docs.feegow.com
+iclinic.com.br
+dentaloffice.com.br
+ninsaude.com
+dentalink.cl · dentalink.mx
+Internacional
+opendental.com/site/apispecification.html · /site/fees.html
+dentrix.com · henryscheinone.com/dental-solutions/api-exchange
+curvedental.com/pricing
+dentally.co/pricing · developer.dentally.co
+cliniko.com/pricing · docs.api.cliniko.com · cliniko.com/security
+planetdds.com/denticon · developer.planetdds.com
+tab32.com/pricing
+Normativa y pagos
+argentina.gob.ar/normativa/nacional/ley-26529-160432/texto (Ley 26.529)
+argentina.gob.ar/normativa/nacional/ley-25326-64790/texto (Ley 25.326)
+argentina.gob.ar/normativa/nacional/380005/texto (Decreto 98/2023)
+argentina.gob.ar/normativa/nacional/decreto-345-2024-398297/texto
+argentina.gob.ar/normativa/nacional/400825/texto (Res. 1959/2024 — ReNaPDiS)
+argentina.gob.ar/normativa/nacional/415349/texto (Res. 2214/2025)
+argentina.gob.ar/salud/digital/hsi
+arca.gob.ar/ws/documentacion · arca.gob.ar/facturacion/mas-info
+mercadopago.com.ar/ayuda/26748
+developers.facebook.com/docs/whatsapp/pricing · business.whatsapp.com/policy
+twilio.com — WhatsApp Pricing CSV
+G. Verificación de fuentes (comprobación personal, 22/10 y 28/10)
+Como mínimo se comprobaron personalmente 5 fuentes (una por tipo):
+1. Sitio oficial: dentalsoft.com.ar — el informe afirma que no publica precios. Se comprobó: no hay sección
+pública de precios (solo "prueba de 3 meses"). Corrección: marcado [claim]; se dejó como No
+ididlbl i
+Discovery — Gestión de turnos y agenda Página 16
