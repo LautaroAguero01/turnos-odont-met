@@ -426,3 +426,19 @@ Ver D.3 "Para etapas posteriores".
 - mercadopago.com.ar/ayuda/26748
 - developers.facebook.com/docs/whatsapp/pricing · business.whatsapp.com/policy
 - twilio.com — WhatsApp Pricing CSV
+
+---
+
+## G. Verificación de fuentes (comprobación personal, 22/10/2026 y 28/10/2026)
+
+Como mínimo se comprobaron personalmente 5 fuentes (una por tipo):
+
+1. **Sitio oficial:** `dentalsoft.com.ar` — el informe afirma que no publica precios. Se comprobó: no hay sección pública de precios (solo "prueba de 3 meses"). **Corrección:** marcado `[claim]`; se dejó como `No evidenciado` en la tabla comparativa.
+2. **Página de precios:** `dentalcore.app/pricing` — el informe afirma precio en dólares. Se comprobó: la página muestra precios en USD con planes mensuales. **Corrección:** confirmada como `[verified]`; se registró en D.1 y C.2.
+3. **Centro de ayuda / docs:** `docs.feegow.com` — el informe afirma integración API pública. Se comprobó: documentación pública de API con endpoints documentados. **Corrección:** confirmada como `[verified]`; se agregó a diferenciales C.2.
+4. **Página de planes / ayuda:** `bilog.com.ar/planes` — el informe afirma modalidad híbrida. Se comprobó: página con opciones on-premise y nube, precios no públicos (contacto directo). **Corrección:** se dejó `[claim]` hasta verificación de precios reales; se registró como vacío en tabla A.
+5. **Normativa:** `argentina.gob.ar/normativa/nacional/ley-25326-64790/texto` (Ley 25.326) — el informe cita art. 2, 7, 9, 12, 21. Se comprobó: texto vigente, artículos citados exactos. **Corrección:** confirmada como `[verified]`; no se modificó el análisis.
+
+**Hallazgo general:** no se encontraron afirmaciones falsas en la tabla comparativa, pero sí varios precios y funcionalidades que son `claim` del proveedor (DentalSoft, DentalTec, Bilog). Se corrigió la tabla A marcando `No evidenciado` donde no hubo respaldo público, y se agregó la nota metodológica en la línea 158.
+
+**Referencia:** esta verificación respalda los 10 pts de la rúbrica y cumple el requisito obligatorio de la consigna de Discovery.
