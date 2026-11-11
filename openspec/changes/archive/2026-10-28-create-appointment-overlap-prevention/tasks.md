@@ -111,10 +111,10 @@
 **Objetivo:** confirmar que el change está listo para archivar.
 
 **Checklist obligatorio:**
-- [ ] `npm test` → 5 passed, 0 failed, 0 skipped.
-- [ ] `tsc --noEmit` → 0 errores de tipado.
-- [ ] Ningún `any` en el código de producción (revisión manual o con `grep -r "any" src/`).
-- [ ] `schema.sql` presente en `src/infrastructure/persistence/`.
-- [ ] Los 4 artefactos OpenSpec (`proposal.md`, `design.md`, `specs/appointment/spec.md`, `tasks.md`) están completos.
-- [ ] El checkbox `C-07` en `CHANGES.md` está marcado como `[x]`.
-- [ ] El change está archivado en `openspec/changes/archive/`.
+- [x] `npm test` → 5 passed (7 con triangulaciones), 0 failed, 0 skipped.
+- [x] `tsc --noEmit` → 0 errores de tipado.
+- [x] Ningún `any` en el código de producción (revisión manual o con `grep -r "any" src/`).
+- [x] `schema.sql` presente en `src/infrastructure/persistence/`.
+- [x] Los 4 artefactos OpenSpec (`proposal.md`, `design.md`, `specs/appointment/spec.md`, `tasks.md`) están completos.
+- [x] El checkbox `C-07` en `CHANGES.md` está marcado como `[x]`.
+- [x] El change está archivado en `openspec/changes/archive/`.
