@@ -49,7 +49,7 @@ El producto propuesto ataca esa brecha con un MVP de ocho imprescindibles y dos 
 - `docs/discovery/informe-discovery.md` — investigación de mercado, 22/10/2026, 21 sistemas relevados.
 - `docs/discovery/consigna.md` — enunciado de la cátedra y trazabilidad de requisitos.
 - `docs/discovery/discovery-checklist.json` — resultado estructurado de Discovery.
-- `desarrollo-active-stack.pdf` — marco del trabajo de integración (contexto académico, no fuente de mercado).
+- `docs/consigna/desarrollo-active-stack.pdf` — marco del trabajo de integración (contexto académico, no fuente de mercado).
 
 ## Advertencia
 

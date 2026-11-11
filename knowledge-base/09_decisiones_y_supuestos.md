@@ -210,7 +210,7 @@
 
 ### SU-12 — El equipo puede entregar el MVP en el marco del trabajo académico
 **Supuesto:** el alcance de v1.0 es compatible con el tiempo y el equipo disponibles; el trabajo exige un único change implementado y archivado.
-**Origen:** consigna de la cátedra (`desarrollo-active-stack.pdf`) y estado greenfield.
+**Origen:** consigna de la cátedra (`docs/consigna/desarrollo-active-stack.pdf`) y estado greenfield.
 **Riesgo si es falso:** el alcance se recorta o el change queda incompleto.
 **Cómo validar:** roadmap con un change pequeño y verificable; priorizar el flujo de creación de turno sin solapamiento.
 
