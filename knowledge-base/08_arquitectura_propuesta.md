@@ -1,6 +1,6 @@
 # Arquitectura Propuesta
 
-> **Estado.** Documento de **propuesta (no decidido)**. El proyecto es greenfield y no existe código. La arquitectura se deriva del MVP de `discovery/discovery.md` §D.3, de las brechas §C.3 y de las oportunidades §C.4, y de las restricciones legales §E.9. Las decisiones se registran en `09_decisiones_y_supuestos.md` y las incógnitas que las afectan en `10_preguntas_abiertas.md`.
+> **Estado.** Documento de **propuesta (no decidido)**. El proyecto es greenfield y no existe código. La arquitectura se deriva del MVP de `docs/discovery/informe-discovery.md` §D.3, de las brechas §C.3 y de las oportunidades §C.4, y de las restricciones legales §E.9. Las decisiones se registran en `09_decisiones_y_supuestos.md` y las incógnitas que las afectan en `10_preguntas_abiertas.md`.
 
 ## Principios rectores
 

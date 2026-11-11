@@ -1,6 +1,6 @@
 # Decisiones y Supuestos
 
-> **Estado.** Las decisiones marcadas como **adoptada (discovery)** provienen de la recomendación final del informe (`discovery/discovery.md` §D) y del checklist §E. Las marcadas como **propuesta (no decidida)** son decisiones técnicas o de alcance de este documento, necesarias para poder planificar, pero sujetas a confirmación. Los supuestos son inferencias; ninguno debe tratarse como hecho verificado.
+> **Estado.** Las decisiones marcadas como **adoptada (discovery)** provienen de la recomendación final del informe (`docs/discovery/informe-discovery.md` §D) y del checklist §E. Las marcadas como **propuesta (no decidida)** son decisiones técnicas o de alcance de este documento, necesarias para poder planificar, pero sujetas a confirmación. Los supuestos son inferencias; ninguno debe tratarse como hecho verificado.
 
 ## Decisiones documentadas
 

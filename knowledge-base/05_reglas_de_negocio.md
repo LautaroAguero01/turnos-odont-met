@@ -1,6 +1,6 @@
 # Reglas de Negocio
 
-> **Estado.** Las reglas marcadas con `[E.7]` provienen del checklist de discovery (`discovery/discovery.md` §E.7) y son decisiones de producto adoptadas. Las marcadas como **derivada** son propuestas de este documento para hacer operativas aquellas reglas; deben validarse con el usuario (`P1-01`). Las marcadas como **normativa** surgen de la Ley 25.326, la Ley 26.529 o la reglamentación de ARCA.
+> **Estado.** Las reglas marcadas con `[E.7]` provienen del checklist de discovery (`docs/discovery/informe-discovery.md` §E.7) y son decisiones de producto adoptadas. Las marcadas como **derivada** son propuestas de este documento para hacer operativas aquellas reglas; deben validarse con el usuario (`P1-01`). Las marcadas como **normativa** surgen de la Ley 25.326, la Ley 26.529 o la reglamentación de ARCA.
 >
 > Cada regla tiene un código único `RN-{DOMINIO}-{NN}` para trazabilidad con historias de usuario, flujos y pruebas.
 

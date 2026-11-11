@@ -1,6 +1,6 @@
 # Modelo de Datos
 
-> **Estado.** El modelo es una **propuesta (no decidida)** para un SaaS multi-tenant de gestión odontológica. No existe implementación previa. Se deriva de los imprescindibles del MVP (`discovery/discovery.md` §D.3), de las oportunidades de `§C.4` (lista de espera, seña y auditoría), de las reglas de agenda y obras sociales (`§E.7`) y de las restricciones legales (`§E.9`). Los nombres de tablas y campos son orientativos; el esquema definitivo se aprobará con el stack elegido (`P0-03`).
+> **Estado.** El modelo es una **propuesta (no decidida)** para un SaaS multi-tenant de gestión odontológica. No existe implementación previa. Se deriva de los imprescindibles del MVP (`docs/discovery/informe-discovery.md` §D.3), de las oportunidades de `§C.4` (lista de espera, seña y auditoría), de las reglas de agenda y obras sociales (`§E.7`) y de las restricciones legales (`§E.9`). Los nombres de tablas y campos son orientativos; el esquema definitivo se aprobará con el stack elegido (`P0-03`).
 
 ## Convenciones
 

@@ -10,7 +10,7 @@ La regla de negocio que prohíbe dos turnos activos superpuestos para el mismo p
 
 ## Justificación de elección del change (§6.1)
 
-1. **Pertenece al MVP:** es el primer imprescindible de `discovery/discovery.md §D.3` y está priorizado como `[MVP]` en `knowledge-base/06_funcionalidades.md §US-009`.
+1. **Pertenece al MVP:** es el primer imprescindible de `docs/discovery/informe-discovery.md §D.3` y está priorizado como `[MVP]` en `knowledge-base/06_funcionalidades.md §US-009`.
 2. **Tiene reglas de negocio verificables:** `RN-AG-03`, `RN-AG-04`, `RN-AG-05` y `RN-AG-09` son reglas determinísticas, testeables con `Dado / Cuando / Entonces` sin ambigüedad.
 3. **Es lo bastante chico:** cubre exclusivamente la creación del turno y la validación de solapamiento; excluye reprogramación (`C-08`), pagos (`C-10`) y WhatsApp (`C-11`).
 

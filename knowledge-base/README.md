@@ -1,6 +1,6 @@
 # Turnos Odontológicos MET — Base de Conocimiento
 
-Base de conocimiento del proyecto **turnos-odont-met**, un SaaS de gestión de turnos y agenda odontológica para el mercado argentino. Se generó a partir de la investigación de mercado (`discovery/discovery.md`), del enunciado de la cátedra (`discovery/consigna.md`) y del estado estructurado de discovery (`.active-orchestrator-state.json`).
+Base de conocimiento del proyecto **turnos-odont-met**, un SaaS de gestión de turnos y agenda odontológica para el mercado argentino. Se generó a partir de la investigación de mercado (`docs/discovery/informe-discovery.md`), del enunciado de la cátedra (`docs/discovery/consigna.md`) y del estado estructurado de discovery (`docs/discovery/discovery-checklist.json`).
 
 > **Estado del proyecto.** Repositorio greenfield: no hay código, stack elegido ni aplicación. La arquitectura, el modelo de datos y el stack son **propuestas explícitas**, no decisiones tomadas. Las decisiones pendientes están en `10_preguntas_abiertas.md`.
 
@@ -46,9 +46,9 @@ El producto propuesto ataca esa brecha con un MVP de ocho imprescindibles y dos 
 
 ## Fuentes
 
-- `discovery/discovery.md` — investigación de mercado, 22/10/2026, 21 sistemas relevados.
-- `discovery/consigna.md` — enunciado de la cátedra y trazabilidad de requisitos.
-- `.active-orchestrator-state.json` — sección `discovery` con el checklist estructurado.
+- `docs/discovery/informe-discovery.md` — investigación de mercado, 22/10/2026, 21 sistemas relevados.
+- `docs/discovery/consigna.md` — enunciado de la cátedra y trazabilidad de requisitos.
+- `docs/discovery/discovery-checklist.json` — resultado estructurado de Discovery.
 - `desarrollo-active-stack.pdf` — marco del trabajo de integración (contexto académico, no fuente de mercado).
 
 ## Advertencia

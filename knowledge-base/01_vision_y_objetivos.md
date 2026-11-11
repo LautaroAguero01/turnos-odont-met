@@ -1,6 +1,6 @@
 # Visión y Objetivos
 
-> **Fuentes de este documento.** `discovery/discovery.md` (investigación de mercado del 22/10/2026), `discovery/consigna.md` (enunciado y trazabilidad de la cátedra) y la sección `discovery` de `.active-orchestrator-state.json`. Los datos de mercado conservan las etiquetas de evidencia del informe: `[verified]` (documentado públicamente), `[claim]` (afirmación comercial no auditada) y `[no evid.]` (no evidenciado públicamente; no implica inexistencia).
+> **Fuentes de este documento.** `docs/discovery/informe-discovery.md` (investigación de mercado del 22/10/2026), `docs/discovery/consigna.md` (enunciado y trazabilidad de la cátedra) y la sección `discovery` de `.active-orchestrator-state.json`. Los datos de mercado conservan las etiquetas de evidencia del informe: `[verified]` (documentado públicamente), `[claim]` (afirmación comercial no auditada) y `[no evid.]` (no evidenciado públicamente; no implica inexistencia).
 >
 > **Estado del proyecto.** Proyecto greenfield: no existe código, stack elegido ni repositorio de aplicación. Todo lo técnico se presenta como propuesta explícita (`> Propuesta (no decidido)` o `**Suposición:**`) y se consolida en `08_arquitectura_propuesta.md` y `09_decisiones_y_supuestos.md`.
 
@@ -14,7 +14,7 @@ La investigación de mercado concluye que la agenda diaria/semanal multi-profesi
 
 ## Contexto competitivo (síntesis)
 
-El relevamiento cubre **21 sistemas**: 14 de Argentina y Latinoamérica y 7 internacionales de referencia. La matriz ponderada (0–5) y el análisis completo están en `discovery/discovery.md`, secciones A, B y C. Para la definición del producto se retienen los siguientes arquetipos:
+El relevamiento cubre **21 sistemas**: 14 de Argentina y Latinoamérica y 7 internacionales de referencia. La matriz ponderada (0–5) y el análisis completo están en `docs/discovery/informe-discovery.md`, secciones A, B y C. Para la definición del producto se retienen los siguientes arquetipos:
 
 | Arquetipo | Productos de referencia | Qué demuestra | Implicancia para este producto |
 |---|---|---|---|
@@ -23,7 +23,7 @@ El relevamiento cubre **21 sistemas**: 14 de Argentina y Latinoamérica y 7 inte
 | Producto moderno en dólares y sin circuito local completo | DentalCore, Órbita | ARCA nativo y WhatsApp oficial en DentalCore; IA conversacional en Órbita; ninguno con obras sociales completas `[verified]` | La arquitectura moderna no alcanza si falta el circuito local |
 | Benchmark técnico y de experiencia | Dentally, Cliniko, Open Dental | API pública con sandbox, precio visible, relleno de huecos, onboarding simple `[verified]` | Son referencias de arquitectura y UX, no competidores locales |
 
-**Brechas priorizadas** (detalle en `discovery/discovery.md` §C.3):
+**Brechas priorizadas** (detalle en `docs/discovery/informe-discovery.md` §C.3):
 
 1. **Lista de espera:** no evidenciada en ningún competidor argentino del relevamiento. Cada cancelación equivale a un sillón vacío y a un ingreso perdido.
 2. **API pública:** no evidenciada en ningún competidor argentino del relevamiento. No hay ecosistema ni portabilidad real.
@@ -73,7 +73,7 @@ El relevamiento cubre **21 sistemas**: 14 de Argentina y Latinoamérica y 7 inte
 
 ## Alcance v1.0 (MVP)
 
-El alcance se deriva de `discovery/discovery.md` §D.3 y del checklist §E.5. La versión 1.0 incluye los ocho imprescindibles y **dos** de los cuatro diferenciadores candidatos.
+El alcance se deriva de `docs/discovery/informe-discovery.md` §D.3 y del checklist §E.5. La versión 1.0 incluye los ocho imprescindibles y **dos** de los cuatro diferenciadores candidatos.
 
 ### Imprescindibles
 

@@ -1,6 +1,6 @@
 # Descripción General
 
-> **Estado del documento.** Proyecto greenfield: no hay stack elegido, código ni repositorio de aplicación. **Todo el contenido técnico de este archivo es una propuesta**, derivada de las brechas y del MVP sugerido en `discovery/discovery.md` (§C.3, §C.4 y §D.3). Las decisiones se consolidan en `09_decisiones_y_supuestos.md` y las preguntas que las bloquean en `10_preguntas_abiertas.md`.
+> **Estado del documento.** Proyecto greenfield: no hay stack elegido, código ni repositorio de aplicación. **Todo el contenido técnico de este archivo es una propuesta**, derivada de las brechas y del MVP sugerido en `docs/discovery/informe-discovery.md` (§C.3, §C.4 y §D.3). Las decisiones se consolidan en `09_decisiones_y_supuestos.md` y las preguntas que las bloquean en `10_preguntas_abiertas.md`.
 
 ## Stack tecnológico
 

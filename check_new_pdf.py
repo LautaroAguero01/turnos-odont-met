@@ -1,5 +1,5 @@
 import PyPDF2, sys
-with open('discovery/discovery.pdf','rb') as f:
+with open('docs/discovery/informe-discovery.pdf','rb') as f:
     r = PyPDF2.PdfReader(f)
     pages = len(r.pages)
     text = ''

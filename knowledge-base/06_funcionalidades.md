@@ -1,6 +1,6 @@
 # Funcionalidades
 
-> **Estado.** Historias derivadas del MVP sugerido en `discovery/discovery.md` §D.3 y de los casos de uso §E.3. La prioridad `[MVP]` indica alcance de v1.0; `[v1.1]` y `[v2]` quedan fuera del primer lanzamiento. Cada historia referencia las reglas de `05_reglas_de_negocio.md` que la gobiernan.
+> **Estado.** Historias derivadas del MVP sugerido en `docs/discovery/informe-discovery.md` §D.3 y de los casos de uso §E.3. La prioridad `[MVP]` indica alcance de v1.0; `[v1.1]` y `[v2]` quedan fuera del primer lanzamiento. Cada historia referencia las reglas de `05_reglas_de_negocio.md` que la gobiernan.
 >
 > Formato: **Como** [actor] **quiero** [acción] **para** [beneficio]. Los criterios de aceptación son verificables y se traducirán en escenarios de especificación y pruebas.
 
