@@ -13,7 +13,7 @@
 
 - `package.json` — con `scripts.test: "jest"` y dependencias de desarrollo: `typescript`, `ts-jest`, `jest`, `@types/jest`.
 - `tsconfig.json` — `strict: true`, `target: ES2022`, `module: CommonJS`, `outDir: dist`.
-- `jest.config.ts` — preset `ts-jest`, `testMatch: ["**/__tests__/**/*.spec.ts"]`.
+- `jest.config.ts` — preset `ts-jest`, `testMatch: ["**/tests/**/*.spec.ts"]`.
 
 **Criterio de aceptación:**
 - `npm install` finaliza sin errores.
@@ -78,7 +78,7 @@
 
 **Archivos:**
 - `src/infrastructure/persistence/InMemoryAppointmentRepository.ts`
-- `src/__tests__/create-appointment.spec.ts`
+- `tests/create-appointment.spec.ts`
 
 **Tests a implementar** (derivados directamente de `specs/appointment/spec.md`):
 

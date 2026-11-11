@@ -28,4 +28,4 @@
 - Implementación: `src/application/create-appointment/CreateAppointmentUseCase.ts`
 - Dominio: `src/domain/appointment/Appointment.ts`, `TimeRange.ts`
 - Errores: `src/domain/errors/ProfessionalConflictError.ts`, `ChairConflictError.ts`, `DomainError.ts`
-- Tests: `src/__tests__/create-appointment.spec.ts` (7 tests verdes)
+- Tests: `tests/create-appointment.spec.ts` (7 tests verdes)

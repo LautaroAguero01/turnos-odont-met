@@ -24,8 +24,8 @@ src/
 │   └── persistence/
 │       ├── InMemoryAppointmentRepository.ts   # Para tests
 │       └── schema.sql                          # DDL PostgreSQL (btree_gist + EXCLUDE)
-└── __tests__/
-    └── create-appointment.spec.ts     # Suite Jest con los 5 escenarios
+tests/
+└── create-appointment.spec.ts         # Suite Jest con los 5 escenarios
 ```
 
 ---
