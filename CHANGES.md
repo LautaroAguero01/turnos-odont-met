@@ -120,7 +120,7 @@ GATE 8: C-08, C-13, C-17, C-20 ✓
 ## FASE 1 — Infraestructura y Core Foundation
 
 ### [C-01] `foundation-setup`
-- **Estado**: `[ ]` pendiente
+- **Estado**: `[x]` completado (ciclo OPSX)
 - **Scope**:
   - Scaffolding de monolito modular con TypeScript y Node.js.
   - Configuración de entorno base (`.env.example`, variables obligatorias de base y redis).
@@ -497,7 +497,7 @@ GATE 8: C-08, C-13, C-17, C-20 ✓
 
 | Código | Nombre | Fase | Governance | Dependencias | Estado |
 |---|---|---|---|---|---|
-| **C-01** | `foundation-setup` | Fase 1: Infra | BAJO | Ninguna | `[ ]` Pendiente |
+| **C-01** | `foundation-setup` | Fase 1: Infra | BAJO | Ninguna | `[x]` Completado (ciclo OPSX) |
 | **C-02** | `tenants-identity-rbac` | Fase 1: Infra | CRITICO | C-01 | `[ ]` Pendiente |
 | **C-03** | `branches-chairs-schedule` | Fase 2: Config | MEDIO | C-02 | `[ ]` Pendiente |
 | **C-04** | `services-catalog-pricing` | Fase 2: Config | BAJO | C-02 | `[ ]` Pendiente |
