@@ -1,10 +1,10 @@
-import { Appointment } from '../../domain/appointment/Appointment';
-import { TimeRange } from '../../domain/appointment/TimeRange';
-import { IAppointmentRepository } from '../../domain/appointment/IAppointmentRepository';
+import { Appointment } from '../domain/Appointment';
+import { TimeRange } from '../domain/TimeRange';
+import { IAppointmentRepository } from '../domain/IAppointmentRepository';
 import { CreateAppointmentDto } from './CreateAppointmentDto';
-import { ProfessionalConflictError } from '../../domain/errors/ProfessionalConflictError';
-import { ChairConflictError } from '../../domain/errors/ChairConflictError';
-import { DomainError } from '../../domain/errors/DomainError';
+import { ProfessionalConflictError } from '../../../shared/errors/ProfessionalConflictError';
+import { ChairConflictError } from '../../../shared/errors/ChairConflictError';
+import { DomainError } from '../../../shared/errors/DomainError';
 
 export class CreateAppointmentUseCase {
   constructor(private readonly repository: IAppointmentRepository) {}

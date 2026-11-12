@@ -1,9 +1,9 @@
-import { CreateAppointmentUseCase } from '../src/application/create-appointment/CreateAppointmentUseCase';
-import { InMemoryAppointmentRepository } from '../src/infrastructure/persistence/InMemoryAppointmentRepository';
-import { ProfessionalConflictError } from '../src/domain/errors/ProfessionalConflictError';
-import { ChairConflictError } from '../src/domain/errors/ChairConflictError';
-import { DomainError } from '../src/domain/errors/DomainError';
-import { TimeRange } from '../src/domain/appointment/TimeRange';
+import { CreateAppointmentUseCase } from '../../apps/api/src/modules/scheduling/application/CreateAppointmentUseCase';
+import { InMemoryAppointmentRepository } from '../../apps/api/src/modules/scheduling/infrastructure/InMemoryAppointmentRepository';
+import { ProfessionalConflictError } from '../../apps/api/src/shared/errors/ProfessionalConflictError';
+import { ChairConflictError } from '../../apps/api/src/shared/errors/ChairConflictError';
+import { DomainError } from '../../apps/api/src/shared/errors/DomainError';
+import { TimeRange } from '../../apps/api/src/modules/scheduling/domain/TimeRange';
 
 describe('CreateAppointmentUseCase — Prevención de Solapamiento', () => {
   let repository: InMemoryAppointmentRepository;

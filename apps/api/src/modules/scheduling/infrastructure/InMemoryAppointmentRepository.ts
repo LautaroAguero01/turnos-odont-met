@@ -1,9 +1,9 @@
-import { Appointment } from '../../domain/appointment/Appointment';
+import { Appointment } from '../domain/Appointment';
 import {
   IAppointmentRepository,
   FindConflictsResult,
-} from '../../domain/appointment/IAppointmentRepository';
-import { TimeRange } from '../../domain/appointment/TimeRange';
+} from '../domain/IAppointmentRepository';
+import { TimeRange } from '../domain/TimeRange';
 
 export class InMemoryAppointmentRepository implements IAppointmentRepository {
   private appointmentsByTenant = new Map<string, Appointment[]>();

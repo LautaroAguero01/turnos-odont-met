@@ -1,4 +1,4 @@
-import { DomainError } from '../errors/DomainError';
+import { DomainError } from '../../../shared/errors/DomainError';
 
 export class TimeRange {
   constructor(

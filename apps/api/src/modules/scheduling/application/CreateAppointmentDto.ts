@@ -1,4 +1,4 @@
-import { AppointmentStatus } from '../../domain/appointment/AppointmentStatus';
+import { AppointmentStatus } from '../domain/AppointmentStatus';
 
 export interface CreateAppointmentDto {
   id?: string;
