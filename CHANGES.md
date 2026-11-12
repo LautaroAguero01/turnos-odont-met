@@ -495,29 +495,29 @@ GATE 8: C-08, C-13, C-17, C-20 ✓
 
 ## Resumen del Roadmap
 
-| Código | Nombre | Fase | Governance | Dependencias |
-|---|---|---|---|---|
-| **C-01** | `foundation-setup` | Fase 1: Infra | BAJO | Ninguna |
-| **C-02** | `tenants-identity-rbac` | Fase 1: Infra | CRITICO | C-01 |
-| **C-03** | `branches-chairs-schedule` | Fase 2: Config | MEDIO | C-02 |
-| **C-04** | `services-catalog-pricing` | Fase 2: Config | BAJO | C-02 |
-| **C-05** | `insurances-basic-catalog` | Fase 2: Config | BAJO | C-02 |
-| **C-06** | `patients-directory` | Fase 3: Pacientes | MEDIO | C-02 |
-| **C-07** | `create-appointment-overlap-prevention` | Fase 3: Agenda | CRITICO | C-03, C-04, C-06 |
-| **C-08** | `appointment-reschedule-cancel` | Fase 3: Agenda | MEDIO | C-07 |
-| **C-09** | `public-booking-flow` | Fase 4: Reserva | ALTO | C-05, C-07 |
-| **C-10** | `mercadopago-deposit-integration` | Fase 4: Pagos | CRITICO | C-07, C-09 |
-| **C-11** | `whatsapp-cloud-notifications` | Fase 4: WhatsApp | ALTO | C-07, C-08 |
-| **C-12** | `smart-waitlist-engine` | Fase 5: Diferenciador | MEDIO | C-08, C-11 |
-| **C-13** | `clinical-record-anamnesis` | Fase 6: Clínica | CRITICO | C-06 |
-| **C-14** | `odontogram-fdi` | Fase 6: Clínica | MEDIO | C-13 |
-| **C-15** | `digital-informed-consent` | Fase 6: Cumplimiento | ALTO | C-13 |
-| **C-16** | `treatment-plans-quotes` | Fase 6: Presupuestos | MEDIO | C-14 |
-| **C-17** | `cash-session-payments` | Fase 7: Caja | ALTO | C-10, C-16 |
-| **C-18** | `arca-electronic-invoicing` | Fase 7: ARCA | CRITICO | C-17 |
-| **C-19** | `insurance-draft-settlement` | Fase 7: Obras Soc. | BAJO | C-05, C-17 |
-| **C-20** | `audit-trail-access-log` | Fase 8: Auditoría | CRITICO | C-02 |
-| **C-21** | `data-export-total-takeout` | Fase 8: Cierre | ALTO | C-08, C-13, C-17, C-20 |
+| Código | Nombre | Fase | Governance | Dependencias | Estado |
+|---|---|---|---|---|---|
+| **C-01** | `foundation-setup` | Fase 1: Infra | BAJO | Ninguna | `[ ]` Pendiente |
+| **C-02** | `tenants-identity-rbac` | Fase 1: Infra | CRITICO | C-01 | `[ ]` Pendiente |
+| **C-03** | `branches-chairs-schedule` | Fase 2: Config | MEDIO | C-02 | `[ ]` Pendiente |
+| **C-04** | `services-catalog-pricing` | Fase 2: Config | BAJO | C-02 | `[ ]` Pendiente |
+| **C-05** | `insurances-basic-catalog` | Fase 2: Config | BAJO | C-02 | `[ ]` Pendiente |
+| **C-06** | `patients-directory` | Fase 3: Pacientes | MEDIO | C-02 | `[ ]` Pendiente |
+| **C-07** | `create-appointment-overlap-prevention` | Fase 3: Agenda | CRITICO | C-03, C-04, C-06 | `[x]` Completado (ciclo OPSX) |
+| **C-08** | `appointment-reschedule-cancel` | Fase 3: Agenda | MEDIO | C-07 | `[ ]` Pendiente |
+| **C-09** | `public-booking-flow` | Fase 4: Reserva | ALTO | C-05, C-07 | `[ ]` Pendiente |
+| **C-10** | `mercadopago-deposit-integration` | Fase 4: Pagos | CRITICO | C-07, C-09 | `[ ]` Pendiente |
+| **C-11** | `whatsapp-cloud-notifications` | Fase 4: WhatsApp | ALTO | C-07, C-08 | `[ ]` Pendiente |
+| **C-12** | `smart-waitlist-engine` | Fase 5: Diferenciador | MEDIO | C-08, C-11 | `[ ]` Pendiente |
+| **C-13** | `clinical-record-anamnesis` | Fase 6: Clínica | CRITICO | C-06 | `[ ]` Pendiente |
+| **C-14** | `odontogram-fdi` | Fase 6: Clínica | MEDIO | C-13 | `[ ]` Pendiente |
+| **C-15** | `digital-informed-consent` | Fase 6: Cumplimiento | ALTO | C-13 | `[ ]` Pendiente |
+| **C-16** | `treatment-plans-quotes` | Fase 6: Presupuestos | MEDIO | C-14 | `[ ]` Pendiente |
+| **C-17** | `cash-session-payments` | Fase 7: Caja | ALTO | C-10, C-16 | `[ ]` Pendiente |
+| **C-18** | `arca-electronic-invoicing` | Fase 7: ARCA | CRITICO | C-17 | `[ ]` Pendiente |
+| **C-19** | `insurance-draft-settlement` | Fase 7: Obras Soc. | BAJO | C-05, C-17 | `[ ]` Pendiente |
+| **C-20** | `audit-trail-access-log` | Fase 8: Auditoría | CRITICO | C-02 | `[ ]` Pendiente |
+| **C-21** | `data-export-total-takeout` | Fase 8: Cierre | ALTO | C-08, C-13, C-17, C-20 | `[ ]` Pendiente |
 
 ---
 
