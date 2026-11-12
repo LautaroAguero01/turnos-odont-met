@@ -135,7 +135,7 @@ GATE 8: C-08, C-13, C-17, C-20 ✓
   - `knowledge-base/09_decisiones_y_supuestos.md` §DD-08 y §DD-09
 
 ### [C-02] `tenants-identity-rbac`
-- **Estado**: `[ ]` pendiente
+- **Estado**: `[x]` completado (ciclo OPSX)
 - **Scope**:
   - Tablas `tenant`, `user`, `membership`, `session`, `invitation`.
   - Mecanismo de multi-tenancy con discriminador `tenant_id` y políticas Row Level Security (RLS).
@@ -498,7 +498,7 @@ GATE 8: C-08, C-13, C-17, C-20 ✓
 | Código | Nombre | Fase | Governance | Dependencias | Estado |
 |---|---|---|---|---|---|
 | **C-01** | `foundation-setup` | Fase 1: Infra | BAJO | Ninguna | `[x]` Completado (ciclo OPSX) |
-| **C-02** | `tenants-identity-rbac` | Fase 1: Infra | CRITICO | C-01 | `[ ]` Pendiente |
+| **C-02** | `tenants-identity-rbac` | Fase 1: Infra | CRITICO | C-01 | `[x]` Completado (ciclo OPSX) |
 | **C-03** | `branches-chairs-schedule` | Fase 2: Config | MEDIO | C-02 | `[ ]` Pendiente |
 | **C-04** | `services-catalog-pricing` | Fase 2: Config | BAJO | C-02 | `[ ]` Pendiente |
 | **C-05** | `insurances-basic-catalog` | Fase 2: Config | BAJO | C-02 | `[ ]` Pendiente |
